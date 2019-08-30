@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>电子请帖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent" />
+      <link href="../assets/css/common.css" rel="stylesheet" />
+      <link href="./css/index.css" rel="stylesheet" />
+      <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+      <script src="../assets/js/jquery.min.js"></script>
+      <script type="text/javascript" src="../assets/js/jdate.js"></script>
+      <script src="../assets/js/host.js"></script>
+      <script src="../assets/js/public.js"></script>
+    <script>
+      setSize();
+      function setSize() {
+        document.documentElement.style.fontSize =
+          document.documentElement.clientWidth / 7.5 + "px";
+      }
+      window.onresize = setSize;
+    </script>
+  </head>
+  <div class="top_box">
+    <div class="back_btns"><i></i></div>
+    <div class="title">电子请帖</div>
+    <div class="save_bts">保存</div>
+  </div>
+  <body class="addressbody">
+    <div class="address_box">
+      <div class="address_ipt">
+        <label class="typename" for="input-id">新郎姓名</label>
+        <input class="typeipt" id="boyname" type="text" placeholder="请输入新郎姓名" value="" />
+      </div>
+      <div class="address_ipt">
+        <label class="typename" for="input-id">新娘姓名</label>
+        <input class="typeipt" id="girlname" type="text"  placeholder="请输入新娘姓名" value="" />
+      </div>
+      <div class="address_ipt">
+        <label class="typename" for="input-id">婚礼时间</label>
+        <div class="typeipt date-group">
+          <input class="typename form-control" type="text" id="date-group1-5" placeholder="请输入结婚时间">
+        </div>
+      </div>
+      <div class="address_ipt">
+        <label class="typename" for="input-id">婚礼地址</label>
+        <input class="typeipt" type="text" id="address" placeholder="请输入婚礼地址" value="" />
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  $(function(){
+			new Jdate({
+				el: '#date-group1-5',
+				format: 'YYYY-MM-DD hh:mm:ss',
+				beginYear: 2000,
+				endYear: 2100
+      })
+  $(".back_btns").click(function(){
+    history.go(-1)
+  })
+  // $(".date-group").click(function(){
+  //    alert("sdf")
+  //       $("#girlname").blur()
+  // })
+
+
+  $(".save_bts").click(function(){
+    if($("#boyname").val() == ""){
+      alert("新郎姓名不能为空");
+      return false;
+    }
+    if($("#girlname").val() == ""){
+      alert("新娘姓名不能为空");
+      return false;
+    }
+    if($("#date-group1-5").val() == ""){
+      alert("时间不能为空");
+      return false;
+    }
+    if($("#address").val() == ""){
+      alert("地址不能为空");
+      return false;
+    }
+     var num = helpClass.getQueryString("id"); 
+
+       hosts({
+        url:"api/UseTemplateRecord/SaveUserTemplate",
+        type:"POST",
+        contentType: "application/json-patch+json",
+        data:{
+          "TemplateID":num*1,
+          "GroomName":$("#boyname").val(),
+          "BridesName":$("#girlname").val(),
+          "WeddingTime":$("#date-group1-5").val(),
+          "WeddingAddress":$("#address").val()
+        }
+      },
+      function (res) {
+       // console.log(res.ReturnObject);
+          if(res.ReturnCode == "0"){
+            console.log("保存成功");
+             window.location.href = "templatedetails.html?id=" + res.ReturnObject;
+          }
+      })
+  })
+  })
+
+</script>
