@@ -1,5 +1,5 @@
 var host = "http://10.0.102.46:99/";
-
+//https://openapi.studioartiz.com/线上环境地址
 function hosts(obj,fn) {
     var obj1　= {
         type: "GET",

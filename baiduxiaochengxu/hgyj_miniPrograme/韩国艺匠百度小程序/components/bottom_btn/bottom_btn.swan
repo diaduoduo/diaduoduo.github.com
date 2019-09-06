@@ -1,0 +1,32 @@
+<view class="wrap-bottom {{isIphone?'p66':''}}">
+	<view class="left-btn" bindtap='toggleModal'>
+		<image src='/images/icon_cust@2x.png' class="btn-img"></image>
+		<view class="btn-content">预约</view>
+	</view>
+	<!-- <view s-else class="left-btn">
+		<image src='/images/icon_cust@2x.png' class="btn-img"></image>
+		<view class="btn-content">预约</view>
+		<button open-type='getPhoneNumber' class='getPhoneNumber' bindgetphonenumber='getPhoneNumber'></button>
+	</view> -->
+	<view class="left-btn" bindtap='makePhoneCall'>
+		<image src='/images/icon_pho@2x.png' class="btn-img"></image>
+		<view class="btn-content">电话</view>
+	</view>
+	<button class="btn-order" bindtap='goH5'>在线咨询</button>
+</view>
+<modal title="店铺优惠" show="{{showModal}}" bindclose="toggleModal" scroll="{{false}}" position="bottom">
+	<view class="wrap-contact">
+		<view class="discount-list">
+			<view class="discount-li">
+				<view class="discount-icon">优惠</view>
+				<view class="disocunt-content">来店请提前电联哦，订单即送台框</view>
+			</view>
+		</view>
+		<view class="discount-tips">填写手机号码，预约到店享优惠</view>
+		<view class="wrap-tel-input">
+			<input type='number' class="tel-input" bindinput='input' value='{=mobile=}' data-model="mobile"
+				placeholder-class='placeholder' placeholder='请填写您的手机号码' />
+		</view>
+		<button class="contact-btn" open-type='getUserInfo' bindgetuserinfo="getUserInfo">预约到店</button>
+	</view>
+</modal>

@@ -1,0 +1,3 @@
+<view class="wrap-comment">
+  <comment page="comment" comment="{{comment}}"></comment>
+</view>

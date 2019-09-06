@@ -1,0 +1,55 @@
+<view class="home-container {{isIphone?'p160':''}}">
+  <view class="top-module module">
+    <swiper class="top-swiper" next-margin="30rpx">
+      <swiper-item class="top-swiper-item" s-for="item, index in info.Charts" s-key="ID">
+        <image src='{{item.Picture}}' class="top-swiper-img" bindtap='go' data-item="{{item}}"></image>
+      </swiper-item>
+    </swiper>
+    <view class="shop-name">{{info.MerchantShop.StoreName}}</view>
+    <view class='wrap-stars'>
+      <view class="stars-container fl">
+        <image src='/images/icon_star@2x.png' class="star"></image>
+        <image src='/images/icon_star@2x.png' class="star"></image>
+        <image src='/images/icon_star@2x.png' class="star"></image>
+        <image src='/images/icon_star@2x.png' class="star"></image>
+        <image src='/images/icon_star@2x.png' class="star"></image>
+      </view>
+      <view class="price fr">
+        <text class='icon-price'>¥</text> {{info.MerchantShop.MinPrice}}</view>
+    </view>
+    <view class="discount" bindtap='viewDiscount' s-if="coupon.length>0">
+      <view class="icon-discount">优惠</view>
+      <view class="content-discount">{{coupon[0].Remarks}}</view>
+      <image src='/images/icon_moe_da@2x.png' class="arrow"></image>
+    </view>
+  </view>
+  <view s-for="item, index in case" s-key="TypeCode">
+    <module title="{{item.Type}}" bindviewmore="viewMore" data-module="{{item.TypeCode}}">
+      <view class='wrap-module-swiper'>
+        <swiper next-margin="20rpx" display-multiple-items="{{(item.OfficialCases.length%2===0)?2:1}}">
+          <swiper-item bindtap="goDetail" data-item="{{item2}}" s-for="item2, index in item.OfficialCases" s-key="ID">
+            <image src='{{item2.Picture}}' class="module-swiper-img"></image>
+            <view class="module-swiper-name">{{item2.Title}}</view>
+            <view class="module-swiper-intro">{{item2.Subheading}}</view>
+          </swiper-item>
+        </swiper>
+      </view>
+    </module>
+    <view class="divider"></view>
+  </view>
+  <module title="套系" s-if="tx.length>0" bindviewmore="viewMore" data-module="tx">
+    <verticle-list tx="{{tx}}" number="4"></verticle-list>
+  </module>
+  <view class="divider" s-if="tx.length>0"></view>
+  <module title="评论" s-if="comment.data.length>0" number="{{comment.recordsFiltered}}" bindviewmore="viewMore" data-module="comment">
+    <comment comment="{{comment.data}}"></comment>
+  </module>
+  <view class='wrap-module-title check-all' bindtap='viewMore' data-module="comment">
+    <view class='module-title'>查看全部点评</view>
+    <image class='arrow' src='/images/icon_moe_da@2x.png'></image>
+  </view>
+
+  <!-- <image src='{{item}}' wx:for="{{info.MerchantShop.ContentImg}}" wx:key="*this" mode="widthFix" class="img-introduce" lazy-load="{{true}}"></image> -->
+  <bottom-btn mobile="{{mobile}}" showModal="{{showContact}}" bindcontact="viewDiscount"></bottom-btn>
+</view>
+<!-- <button s-if="showTelBtn" open-type='getPhoneNumber' class='getPhoneNumber' bindgetphonenumber='getPhoneNumber'></button> -->

@@ -62,9 +62,9 @@
       $(".back_btns").click(function(){
         history.go(-1)
       })
-      $(document).on("click","#date-group1-5",function(){
+      $("#date-group1-5").click(function(){
             $("#girlname").blur()
-      });
+      })
     var num = helpClass.getQueryString("id");
     hosts({
       url:"api/UseTemplateRecord/GetTemplateDetail",
@@ -112,7 +112,8 @@
           "GroomName":$("#boyname").val(),
           "BridesName":$("#girlname").val(),
           "WeddingTime":$("#date-group1-5").val(),
-          "WeddingAddress":$("#address").val()
+          "WeddingAddress":$("#address").val(),
+          UseTemplateUrl: "/h5/card4/templatedetails.html?id={id}"
         }
       },
       function (res) {

@@ -1,0 +1,281 @@
+[
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/app.js",
+        "row": 6,
+        "column": 26,
+        "before": "wx.getUpdateManager",
+        "after": "swan.getUpdateManager",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/app.js",
+        "row": 11,
+        "column": 6,
+        "before": "wx.showModal",
+        "after": "swan.showModal",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/app.js",
+        "row": 23,
+        "column": 6,
+        "before": "wx.showModal",
+        "after": "swan.showModal",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/app.js",
+        "row": 29,
+        "column": 26,
+        "before": "wx.getStorageSync",
+        "after": "swan.getStorageSync",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/app.js",
+        "row": 30,
+        "column": 17,
+        "before": "wx.getSystemInfoSync",
+        "after": "swan.getSystemInfoSync",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/app.js",
+        "row": 31,
+        "column": 29,
+        "before": "wx.getSystemInfoSync",
+        "after": "swan.getSystemInfoSync",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/app.js",
+        "row": 32,
+        "column": 38,
+        "before": "wx.getSystemInfoSync",
+        "after": "swan.getSystemInfoSync",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/app.js",
+        "row": 41,
+        "column": 8,
+        "before": "wx.showModal",
+        "after": "swan.showModal",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/app.js",
+        "row": 69,
+        "column": 4,
+        "before": "wx.showNavigationBarLoading",
+        "after": "swan.showNavigationBarLoading",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/app.js",
+        "row": 70,
+        "column": 4,
+        "before": "wx.request",
+        "after": "swan.request",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/app.js",
+        "row": 76,
+        "column": 10,
+        "before": "wx.showModal",
+        "after": "swan.showModal",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/app.js",
+        "row": 84,
+        "column": 12,
+        "before": "wx.showModal",
+        "after": "swan.showModal",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/app.js",
+        "row": 96,
+        "column": 8,
+        "before": "wx.hideNavigationBarLoading",
+        "after": "swan.hideNavigationBarLoading",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/app.js",
+        "row": 97,
+        "column": 8,
+        "before": "wx.stopPullDownRefresh",
+        "after": "swan.stopPullDownRefresh",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/components/bottom_btn/bottom_btn.js",
+        "row": 35,
+        "column": 15,
+        "before": "wx.getStorageSync",
+        "after": "swan.getStorageSync",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/components/bottom_btn/bottom_btn.js",
+        "row": 70,
+        "column": 16,
+        "before": "wx.showToast",
+        "after": "swan.showToast",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/components/bottom_btn/bottom_btn.js",
+        "row": 74,
+        "column": 16,
+        "before": "wx.setStorageSync",
+        "after": "swan.setStorageSync",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/components/bottom_btn/bottom_btn.js",
+        "row": 129,
+        "column": 18,
+        "before": "wx.showModal",
+        "after": "swan.showModal",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/components/bottom_btn/bottom_btn.js",
+        "row": 142,
+        "column": 6,
+        "before": "wx.navigateTo",
+        "after": "swan.navigateTo",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/components/bottom_btn/bottom_btn.js",
+        "row": 155,
+        "column": 6,
+        "before": "wx.makePhoneCall",
+        "after": "swan.makePhoneCall",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/components/comment/comment.js",
+        "row": 35,
+        "column": 6,
+        "before": "wx.previewImage",
+        "after": "swan.previewImage",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/components/comment/comment.js",
+        "row": 45,
+        "column": 8,
+        "before": "wx.navigateTo",
+        "after": "swan.navigateTo",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/components/verticle_list/verticle_list.js",
+        "row": 34,
+        "column": 6,
+        "before": "wx.navigateTo",
+        "after": "swan.navigateTo",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/pages/case/case.js",
+        "row": 15,
+        "column": 4,
+        "before": "wx.navigateTo",
+        "after": "swan.navigateTo",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/pages/home/home.js",
+        "row": 21,
+        "column": 6,
+        "before": "wx.navigateTo",
+        "after": "swan.navigateTo",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/pages/home/home.js",
+        "row": 77,
+        "column": 16,
+        "before": "wx.showModal",
+        "after": "swan.showModal",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/pages/home/home.js",
+        "row": 91,
+        "column": 6,
+        "before": "wx.navigateTo",
+        "after": "swan.navigateTo",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/pages/home/home.js",
+        "row": 95,
+        "column": 6,
+        "before": "wx.navigateTo",
+        "after": "swan.navigateTo",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/pages/home/home.js",
+        "row": 99,
+        "column": 6,
+        "before": "wx.navigateTo",
+        "after": "swan.navigateTo",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/pages/home/home.js",
+        "row": 106,
+        "column": 4,
+        "before": "wx.navigateTo",
+        "after": "swan.navigateTo",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/pages/success/success.js",
+        "row": 11,
+        "column": 4,
+        "before": "wx.makePhoneCall",
+        "after": "swan.makePhoneCall",
+        "message": "只转换了上下文, wx ==> swan"
+    }
+]

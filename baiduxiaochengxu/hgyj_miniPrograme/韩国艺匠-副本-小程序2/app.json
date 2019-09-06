@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/comment/comment",
+    "pages/tx/tx",
+    "pages/case/case",
+    "pages/tx_detail/tx_detail",
+    "pages/caseDetail/caseDetail",
+    "pages/success/success",
+    "pages/h5/h5"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "韩国艺匠婚纱照",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

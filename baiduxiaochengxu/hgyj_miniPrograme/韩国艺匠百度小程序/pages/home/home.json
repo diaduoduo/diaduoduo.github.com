@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "module": "/components/module/module",
+    "verticle-list": "/components/verticle_list/verticle_list",
+    "comment": "/components/comment/comment",
+    "bottom-btn": "/components/bottom_btn/bottom_btn"
+  },
+  "enablePullDownRefresh": true
+}

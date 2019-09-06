@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 0.28rem;
+}
+
+body{
+    overflow-x: hidden;
+}
+li {
+    list-style-type: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.text-2 {
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+a:hover {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.p11 {
+    padding-bottom: 1.1rem;
+}
+
+.full {
+    display: block;
+    width: 100%;
+}
+
+@font-face {
+    font-family: Didot-Bold;
+    src: url("../font/Didot-Bold-1.ttf")
+}
+
+@font-face {
+    font-family: GothamBookRegular;
+    src: url("../font/GOTHAM-BOOK.TTF")
+}

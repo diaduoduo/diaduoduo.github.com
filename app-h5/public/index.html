@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>韩国艺匠婚尚</title>
+    <script>
+        function setRem() {
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+        }
+
+        setRem();
+        window.onresize = setRem;
+
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return decodeURIComponent(r[2]);
+            return null;
+        }
+
+        let token=getQueryString("token")||'';
+        let userId=getQueryString("userId")||0;
+        let cityCode=getQueryString("cityCode")||0;
+        window.sessionStorage.setItem("cityCode",cityCode);
+        window.sessionStorage.setItem("userId",userId);
+        window.sessionStorage.setItem("token",token);
+    </script>
+</head>
+<body>
+<noscript>
+    <strong>We're sorry but app_h5 doesn't work properly without JavaScript enabled. Please enable it to
+        continue.</strong>
+</noscript>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
+</html>

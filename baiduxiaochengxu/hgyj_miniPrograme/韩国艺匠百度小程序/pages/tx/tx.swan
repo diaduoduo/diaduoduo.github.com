@@ -1,0 +1,10 @@
+<view class="wrap-tx">
+  <view class="tab-list">
+    <view class="tab-li" s-for="item, index in price" bindtap='setTab' data-tab="{{index}}">
+      <view class="tab {{tab==index?'on':''}}">{{item.Key}}</view>
+    </view>
+  </view>
+  <view class="wrap-list">
+    <verticle-list page="tx" tx="{{tx}}"></verticle-list>
+  </view>
+</view>

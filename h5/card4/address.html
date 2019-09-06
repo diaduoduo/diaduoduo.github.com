@@ -40,7 +40,7 @@
       <div class="address_ipt">
         <label class="typename" for="input-id">婚礼时间</label>
         <div class="typeipt date-group">
-          <input class="typename form-control" type="text" id="date-group1-5" placeholder="请输入结婚时间">
+          <input class="typename form-control" readonly type="text" id="date-group1-5" placeholder="请输入结婚时间">
         </div>
       </div>
       <div class="address_ipt">
@@ -57,15 +57,15 @@
 				el: '#date-group1-5',
 				format: 'YYYY-MM-DD hh:mm:ss',
 				beginYear: 2000,
-				endYear: 2100
+        endYear: 2100,
+        trigger:"click",                            //是否为内部触发事件，默认为内部触发事件
       })
   $(".back_btns").click(function(){
     history.go(-1)
   })
-  // $(".date-group").click(function(){
-  //    alert("sdf")
-  //       $("#girlname").blur()
-  // })
+  $("#date-group1-5").click(function(){
+        $("#girlname").blur()
+  })
 
 
   $(".save_bts").click(function(){
@@ -79,6 +79,7 @@
     }
     if($("#date-group1-5").val() == ""){
       alert("时间不能为空");
+      $(this).focus();
       return false;
     }
     if($("#address").val() == ""){
@@ -96,7 +97,8 @@
           "GroomName":$("#boyname").val(),
           "BridesName":$("#girlname").val(),
           "WeddingTime":$("#date-group1-5").val(),
-          "WeddingAddress":$("#address").val()
+          "WeddingAddress":$("#address").val(),
+          UseTemplateUrl: "/h5/card4/templatedetails.html?id={id}"
         }
       },
       function (res) {

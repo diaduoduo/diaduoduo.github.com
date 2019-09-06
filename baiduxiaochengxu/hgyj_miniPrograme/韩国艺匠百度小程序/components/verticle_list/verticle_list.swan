@@ -1,0 +1,18 @@
+<view class='wrap-module-verticle'>
+  <view class="module-verticle-list">
+    <view class="module-verticle-li {{page=='tx'?'tx':''}}" s-for="tx" data-item="{{item}}" s-key="ID" bindtap='goDetail'>
+      <image src='{{item.CoverPicture}}' class="verticle-img"></image>
+      <view class="verticle-li-content">
+        <view class="label">{{item.PopularWord}}</view>
+        <view class="verticle-title text-overflow">{{item.Name}}</view>
+        <view class="wrap-verticle-detail overflow">
+          <view class="detail fl">{{item.Remarks}}
+          </view>
+        </view>
+        <view class="wrap-price"><text class="icon-rmb">￥</text>{{item.Price}}
+          <view class="original-price">￥{{item.OriginalPrice}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

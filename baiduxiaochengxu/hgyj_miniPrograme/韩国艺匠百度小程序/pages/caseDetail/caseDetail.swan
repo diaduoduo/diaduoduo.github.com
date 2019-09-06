@@ -1,0 +1,55 @@
+<view class="wrap-case-detail {{isIphone?'p160':''}}">
+  <image src='{{info.Picture}}' mode="widthFix" class="img"></image>
+  <view class="top-info">
+    <view class="info">
+      <view class="top-title">
+        <view class="title fl text-overflow">{{info.Title}}</view>
+        <!-- <view class="label fr">样片</view> -->
+      </view>
+      <view class="case-label">{{info.Subheading}}</view>
+    </view>
+  </view>
+  <!-- <view class='list'>
+    <view class="list-title">所属套系</view>
+    <view class="li">
+      <view class="wrap-tx-name">
+        <view class='tx-name'>2019全新《ARTIZ PARIS》系列</view>
+        <view class="tx-price fr">
+          <text class="icon-rmb">￥</text>12345
+        </view>
+      </view>
+      <view class="wrap-verticle-detail overflow">
+        <view class="detail fl">精修:
+          <text class="value">50张</text>
+        </view>
+        <view class="detail fl">摄影师:
+          <text class="value">首席</text>
+        </view>
+        <view class="detail fl">造型:
+          <text class="value">5套</text>
+        </view>
+      </view>
+    </view>
+    <view class="li">
+      <view class="wrap-tx-name">
+        <view class='tx-name'>2019全新《ARTIZ PARIS》系列</view>
+        <view class="tx-price fr">
+          <text class="icon-rmb">￥</text>12345
+        </view>
+      </view>
+      <view class="wrap-verticle-detail overflow">
+        <view class="detail fl">精修:
+          <text class="value">50张</text>
+        </view>
+        <view class="detail fl">摄影师:
+          <text class="value">首席</text>
+        </view>
+        <view class="detail fl">造型:
+          <text class="value">5套</text>
+        </view>
+      </view>
+    </view>
+  </view> -->
+  <image src='{{item}}' s-for="item, index in info.ContentImg" s-key="*this" mode="widthFix" class="img"></image>
+  <bottom_btn />
+</view>

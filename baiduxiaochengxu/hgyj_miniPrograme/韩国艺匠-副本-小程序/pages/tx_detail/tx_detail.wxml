@@ -1,0 +1,70 @@
+<view class="wrap-detail {{isIphone?'p160':''}}">
+  <image src='{{info.Picture}}' mode="widthFix" class="img"></image>
+  <view class="top-info">
+    <view class="info">
+      <view class="top-title">
+        <view class="title fl text-overflow">{{info.Name}}</view>
+        <view class="label fr">{{info.PopularWord}}</view>
+      </view>
+      <view class="wrap-price">
+        <text class="icon-rmb">￥</text>{{info.Price}}
+        <view class="original-price">￥{{info.OriginalPrice}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="wrap-intro">
+    <view class="wrap-intro-title">
+      <view class="module-title">套餐介绍</view>
+      <view class="wrap-more" bindtap='toggleModal'>
+        查看更多
+        <image src='/images/icon_mor@2x.png' class="arrow"></image>
+      </view>
+    </view>
+    <!-- <view class="intro-list">
+      <view class="intro-li">
+        <image src='/images/144.png' class="icon-intro"></image>
+        <view class="li-detail">
+          <view class="li-detail-name">造型</view>
+          <view class="li-detail-value">5套</view>
+        </view>
+      </view>
+      <view class="intro-li">
+        <image src='/images/144.png' class="icon-intro"></image>
+        <view class="li-detail">
+          <view class="li-detail-name">拍摄</view>
+          <view class="li-detail-value">5套</view>
+        </view>
+      </view>
+      <view class="intro-li">
+        <image src='/images/144.png' class="icon-intro"></image>
+        <view class="li-detail">
+          <view class="li-detail-name">精修</view>
+          <view class="li-detail-value">5套</view>
+        </view>
+      </view>
+      <view class="intro-li">
+        <image src='/images/144.png' class="icon-intro"></image>
+        <view class="li-detail">
+          <view class="li-detail-name">摄影师</view>
+          <view class="li-detail-value">首席</view>
+        </view>
+      </view>
+    </view>
+    <view class="package">
+      <view class='package-title'>套餐亮点</view>
+      <view class="package-list">
+        <view class="package-li">
+          <text style='font-weight:bold'>·</text> 全新《星夜》系列</view>
+        <view class="package-li">
+          <text style='font-weight:bold'>·</text> 更多详情咨询客服</view>
+      </view>
+    </view> -->
+  </view>
+  <image src='{{item}}' wx:for="{{info.ContentImg}}" wx:key="*this" mode="widthFix" class="img"></image>
+  <bottom_btn/>
+</view>
+<modal title="套餐介绍" show="{{showModal}}" bindclose="toggleModal" scroll="{{true}}">
+  <view class="wrap-package-detail">
+     <image src='{{info.SetMealPicture}}' mode="widthFix" class="img"></image>
+  </view>
+</modal>

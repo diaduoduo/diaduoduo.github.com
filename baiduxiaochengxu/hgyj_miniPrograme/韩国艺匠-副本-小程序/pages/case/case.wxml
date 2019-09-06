@@ -1,0 +1,7 @@
+<view class="list">
+  <view class="li" wx:for="{{list}}" wx:key="ID" bindtap='viewDetail' data-item="{{item}}">
+    <image src='{{item.Picture}}' class="img" mode='widthFix'></image>
+    <view class="title text-overflow">{{item.Title}}</view>
+    <view class="label">{{item.Subheading}}</view>
+  </view>
+</view>

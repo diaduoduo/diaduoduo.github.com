@@ -1,0 +1,215 @@
+page {
+  background: rgba(251, 251, 251, 1);
+}
+
+.home-container {
+  padding-bottom: 108rpx;
+}
+
+.top-module {
+  background-color: #fff;
+  padding-left: 0;
+  padding-bottom: 21rpx;
+  margin-bottom: 20rpx;
+}
+
+.top-swiper {
+  height: 388rpx;
+  width: 100%;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+}
+
+.top-swiper-item {
+  width: 706rpx;
+  height: 100%;
+}
+
+.top-swiper-img {
+  width: 690rpx;
+  height: 388rpx;
+  display: block;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+
+.shop-name {
+  padding: 0 30rpx 0 32rpx;
+  font-size: 34rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(43, 43, 43, 1);
+  line-height: 52rpx;
+  margin: 40rpx 0;
+}
+
+.wrap-stars {
+  overflow: hidden;
+  padding: 0 30rpx 0 32rpx;
+  margin-bottom: 60rpx;
+}
+
+.stars-container .star {
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  margin-right: 6rpx;
+}
+
+.price {
+  font-size: 30rpx;
+  font-family: GothamBookRegular;
+  font-weight: 400;
+  color: #3c2d44;
+  line-height: 30rpx;
+}
+
+.icon-price {
+  font-size: 24rpx;
+  line-height: 30rpx;
+}
+
+.discount {
+  overflow: hidden;
+  padding: 0 30rpx 0 32rpx;
+  position: relative;
+}
+
+.icon-discount {
+  width: 53rpx;
+  height: 28rpx;
+  border: 1px solid rgba(251, 129, 129, 1);
+  border-radius: 4rpx;
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(251, 129, 129, 1);
+  line-height: 28rpx;
+  text-align: center;
+  margin-right: 21rpx;
+  float: left;
+}
+
+.content-discount {
+  width: 480rpx;
+  height: 30rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  line-height: 30rpx;
+  float: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.arrow {
+  position: absolute;
+  right: 24rpx;
+  top: 50%;
+  width: 22rpx;
+  height: 22rpx;
+  transform: translate(0, -50%);
+}
+
+.wrap-module-title {
+  padding: 30rpx 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.module-title {
+  height: 32rpx;
+  font-size: 32rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(43, 43, 43, 1);
+  line-height: 32rpx;
+  float: left;
+}
+
+.wrap-more {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  line-height: 32rpx;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding-right: 54rpx;
+}
+
+.module-swiper {
+  width: 690rpx;
+}
+
+.wrap-module-swiper {
+  overflow-x: hidden;
+}
+
+.module-swiper-item {
+  margin-right: 20rpx;
+}
+
+.module-swiper-img {
+  width: 335rpx;
+  height: 188rpx;
+  display: block;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.divider {
+  width: 100%;
+  height: 20rpx;
+  background: rgba(251, 251, 251, 1);
+}
+
+.module-swiper-name {
+  margin-bottom: 13rpx;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(43, 43, 43, 1);
+  line-height: 28rpx;
+}
+
+.module-swiper-intro {
+  font-size: 24rpx;
+  line-height: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.img-introduce {
+  width: 100%;
+  display: block;
+}
+
+.check-all {
+  position: relative;
+  padding: 30rpx;
+  background: #fff;
+  border-top: 1px solid rgba(240, 240, 240, 1);
+}
+
+.getPhoneNumber{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left:0;
+  top:0;
+  opacity: 0
+}

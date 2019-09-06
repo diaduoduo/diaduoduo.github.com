@@ -1,0 +1,14 @@
+
+<view class="modal" hidden="{{!show}}">
+  <view class="mask {{show?'fadeIn':''}}" catchtouchmove="noScroll" bindtap='close'></view>
+  <view class="modal-container {{position}}">
+    <view class="modal-title">{{title}}
+      <view class="wrap-img" bindtap='close'>
+        <image src='/images/icon_deta_close@2x.png' class="close"></image>
+      </view>
+    </view>
+    <view class='modal-content'>
+      <slot></slot>
+    </view>
+  </view>
+</view>

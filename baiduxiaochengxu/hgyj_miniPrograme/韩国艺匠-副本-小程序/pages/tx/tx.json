@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "verticle_list": "/components/verticle_list/verticle_list"
+  },
+  "navigationBarTitleText": "全部套系",
+  "enablePullDownRefresh":true
+}

@@ -306,7 +306,7 @@
 
             <div class="f5_image">
               <div class="icon_upload photo_btn"></div>
-              <img class="img_12 img_12_2 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="2s" swiper-animate-delay="0.5s" src="images/pic/6.jpg" custom-type-img="7" ratio="0.77" alt=""/>
+              <img class="img_12 img_12_2 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="2s" swiper-animate-delay="0.5s" src="images/pic/6.jpg" custom-type-img="7" ratio="1.24" alt=""/>
             </div>
             
           </div>
@@ -360,7 +360,7 @@
      var token= helpClass.getQueryString("token");
           localStorage.setItem("token",token);
           console.log(num);console.log(token);
-      $(document).on("click touchstart",".back_btns",function(){
+      $(document).on("touchstart",".back_btns",function(){
            obj.finish()
       });
       hosts(
@@ -374,7 +374,7 @@
           console.log(res);
           document.title=res.ReturnObject.Title;
           $(".men_name").html(res.ReturnObject.GroomName);
-          $(".gril_name").html(res.ReturnObject.BridesName);
+          $(".girl_name").html(res.ReturnObject.BridesName);
           $(".WeddingTime").html(res.ReturnObject.WeddingTime);
           $(".WeddingAddress").html(res.ReturnObject.WeddingAddress);
           

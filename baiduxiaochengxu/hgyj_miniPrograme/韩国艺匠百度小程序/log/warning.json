@@ -1,0 +1,65 @@
+[
+    {
+        "type": "show tips",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/app.js",
+        "row": 5,
+        "column": 4,
+        "before": "wx.login",
+        "after": "swan.login",
+        "message": "wx.login --- 登录接口code换取openid和session_key 在百度小程序中存在diff \n      相关文档：https://smartapp.baidu.com/docs/develop/api/open_log/#Session-Key/"
+    },
+    {
+        "type": "show tips",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/app.js",
+        "row": 36,
+        "column": 4,
+        "before": "wx.login",
+        "after": "swan.login",
+        "message": "wx.login --- 登录接口code换取openid和session_key 在百度小程序中存在diff \n      相关文档：https://smartapp.baidu.com/docs/develop/api/open_log/#Session-Key/"
+    },
+    {
+        "type": "show tips",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/components/bottom_btn/bottom_btn.js",
+        "row": 54,
+        "column": 6,
+        "before": "wx.login",
+        "after": "swan.login",
+        "message": "wx.login --- 登录接口code换取openid和session_key 在百度小程序中存在diff \n      相关文档：https://smartapp.baidu.com/docs/develop/api/open_log/#Session-Key/"
+    },
+    {
+        "type": "show tips",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/components/bottom_btn/bottom_btn.js",
+        "row": 110,
+        "column": 8,
+        "before": "wx.login",
+        "after": "swan.login",
+        "message": "wx.login --- 登录接口code换取openid和session_key 在百度小程序中存在diff \n      相关文档：https://smartapp.baidu.com/docs/develop/api/open_log/#Session-Key/"
+    },
+    {
+        "type": "show tips",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/pages/home/home.js",
+        "row": 36,
+        "column": 6,
+        "before": "wx.login",
+        "after": "swan.login",
+        "message": "wx.login --- 登录接口code换取openid和session_key 在百度小程序中存在diff \n      相关文档：https://smartapp.baidu.com/docs/develop/api/open_log/#Session-Key/"
+    },
+    {
+        "type": "show tips",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/pages/home/home.js",
+        "row": 54,
+        "column": 16,
+        "before": "wx.login",
+        "after": "swan.login",
+        "message": "wx.login --- 登录接口code换取openid和session_key 在百度小程序中存在diff \n      相关文档：https://smartapp.baidu.com/docs/develop/api/open_log/#Session-Key/"
+    },
+    {
+        "type": "show tips",
+        "file": "D:/project/韩国艺匠/hgyj_miniPrograme/韩国艺匠百度小程序/pages/home/home.js",
+        "row": 179,
+        "column": 4,
+        "before": "wx.login",
+        "after": "swan.login",
+        "message": "wx.login --- 登录接口code换取openid和session_key 在百度小程序中存在diff \n      相关文档：https://smartapp.baidu.com/docs/develop/api/open_log/#Session-Key/"
+    }
+]

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "bottom_btn": "/components/bottom_btn/bottom_btn",
+    "modal": "/components/modal/modal"
+  },
+  "navigationBarTitleText": "案例详情"
+}

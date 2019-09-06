@@ -1,0 +1,235 @@
+.p66 {
+  padding-bottom: 66rpx !important;
+  height: 156rpx !important;
+}
+
+.wrap-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 108rpx;
+  width: 100%;
+  background: #fff;
+  padding: 18rpx 60rpx;
+  box-sizing: border-box;
+  border-top: 1px solid #eee;
+}
+
+.left-btn {
+  float: left;
+  margin-right: 50rpx;
+  width: 80rpx;
+  position: relative;
+}
+
+.btn-img {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  margin: 0 auto 10rpx;
+}
+
+.btn-content {
+  height: 20rpx;
+  font-size: 20rpx;
+  line-height: 20rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: #3c2d44;
+  text-align: center;
+}
+
+.btn-order {
+  width: 360rpx;
+  height: 72rpx;
+  background: #3c2d44;
+  border-radius: 40rpx;
+  float: right;
+  font-size: 32rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  line-height: 72rpx;
+  border:none;
+}
+.btn-order::after{
+    border:none;
+}
+
+.text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.wrap-kf {
+  position: absolute;
+  left: 50%;
+  bottom: 118%;
+  width: 620rpx;
+  height: 126rpx;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20rpx 20rpx 20rpx 2rpx;
+  z-index: 3;
+  padding: 20rpx 82rpx 20rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.kf-close {
+  width: 14rpx;
+  height: 14rpx;
+  display: block;
+}
+
+.wrap-close {
+  position: absolute;
+  right: 0;
+  height: 44rpx;
+  width: 44rpx;
+  top: 0;
+  box-sizing: border-box;
+  padding-right: 28rpx;
+  padding-top: 28rpx;
+}
+
+.kf-container {
+  display: flex;
+}
+
+.tips-img {
+  width: 86rpx;
+  height: 86rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  display: block;
+}
+
+.wrap-kf-tips {
+  flex: 1;
+  overflow: hidden;
+  padding-left: 18rpx;
+  box-sizing: border-box;
+}
+
+.tips-top {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  line-height: 24rpx;
+  margin-top: 13rpx;
+}
+
+.tips-bottom {
+  font-size: 22rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  line-height: 22rpx;
+  margin-top: 17rpx;
+}
+
+.wrap-contact {
+  padding-bottom: 30rpx;
+}
+
+.discount-list {
+  padding: 31rpx 0;
+  border-bottom: 1px solid rgba(240, 240, 240, 1);
+}
+
+.discount-li {
+  display: flex;
+  margin-bottom: 24rpx;
+}
+
+.discount-li:last-child {
+  margin-bottom: 0;
+}
+
+.discount-icon {
+  width: 53rpx;
+  height: 28rpx;
+  border: 1px solid rgba(251, 129, 129, 1);
+  border-radius: 4rpx;
+  line-height: 28rpx;
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(251, 129, 129, 1);
+  text-align: center;
+}
+
+.disocunt-content {
+  flex: 1;
+  line-height: 28rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  padding-left: 21rpx;
+}
+
+.discount-tips {
+  padding: 30rpx 0 23rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(43, 43, 43, 1);
+  line-height: 24rpx;
+}
+
+.tel-input {
+  display: block;
+  margin: 0 auto 14rpx;
+  width: 99%;
+  height: 68rpx;
+  border: 1px solid rgba(240, 240, 240, 1);
+  border-radius: 34rpx;
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.placeholder {
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(206, 206, 206, 1);
+  text-align: center;
+  line-height: 26rpx;
+}
+
+.contact-btn {
+  width: 100%;
+  height: 68rpx;
+  background: #3c2d44;
+  border-radius: 34rpx;
+  line-height: 68rpx;
+  text-align: center;
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+}
+
+button.wrap-kf-concat {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.getPhoneNumber {
+  border: 0;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,108 @@
+.wrap-case-detail {
+  padding-bottom: 110rpx;
+}
+.img {
+  width: 100%;
+  display: block;
+}
+
+.top-info {
+  padding: 0 30rpx;
+}
+
+.info {
+  padding: 30rpx 0;
+  border-bottom: 1px solid rgba(240, 240, 240, 1);
+}
+
+.top-title {
+  overflow: hidden;
+}
+
+.title {
+  width: 600rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(43, 43, 43, 1);
+  font-size: 28rpx;
+  line-height: 32rpx;
+  margin-bottom: 22rpx;
+}
+
+.case-label {
+  font-size: 24rpx;
+  line-height: 24rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+}
+
+.label {
+  width: 80rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(254, 189, 86, 1);
+  text-align: center;
+  margin-top: 4rpx;
+}
+
+.list {
+  padding: 0 30rpx;
+  margin-bottom: 12rpx;
+}
+
+.list-title {
+  padding: 30rpx 0 48rpx;
+  position: relative;
+  overflow: hidden;
+  height: 28rpx;
+  font-size: 28rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(43, 43, 43, 1);
+  line-height: 28rpx;
+}
+
+.li {
+  margin-bottom: 48rpx;
+}
+
+.wrap-tx-name {
+  overflow: hidden;
+}
+
+.tx-name {
+  font-family: PingFang-SC-Regular;
+  color: #2b2b2b;
+  font-size: 28rpx;
+  line-height: 36rpx;
+  height: 36rpx;
+  width: 560rpx;
+  float: left;
+}
+
+.tx-price {
+  color: #a9516f;
+  font-size: 30rpx;
+  font-family: GothamBookRegular;
+  line-height: 32rpx;
+}
+
+.icon-rmb {
+  font-size: 20rpx;
+}
+
+.detail {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: #999;
+  margin-right: 20rpx;
+  margin-top: 10rpx;
+}
+
+.detail:last-child {
+  margin-right: 0;
+}

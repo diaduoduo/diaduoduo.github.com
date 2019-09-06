@@ -1,0 +1,12 @@
+<view class="module">
+  <view class="wrap-module-title">
+    <view class="module-title">{{title}}
+      <text wx:if="{{number>=0}}" class="comment-number">（{{number}}）</text>
+    </view>
+    <view class="wrap-more" bindtap='viewMore'>
+      {{more}}
+      <image wx:if="{{showArrow}}" src='/images/icon_moe_da@2x.png' class="arrow"></image>
+    </view>
+  </view>
+  <slot></slot>
+</view>

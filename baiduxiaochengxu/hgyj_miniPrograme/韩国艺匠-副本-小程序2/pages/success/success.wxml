@@ -1,0 +1,16 @@
+<view class="wrap-success">
+  <image src='/images/icon_rou@2x.png' class="icon_rou"></image>
+  <view class="tips">专业顾问正在为您查询档期，</view>
+  <view class="tips" style='margin-bottom:48rpx;'>请留意电话接听！</view>
+  <view class='tips-small'>直接联系顾问补充服务细节</view>
+  <view class='wrap-btn'>
+    <view class="btn" bindtap='makePhoneCall'>
+      <image src='/images/icon_tel@2x.png' class='icon_tel'></image>
+    </view>
+    <view class='btn'>
+      <button plain='{{true}}' open-type='contact' class='icon_tel'>
+        <image src='/images/icon_vie@2x.png' class='icon_tel'></image>
+      </button>
+    </view>
+  </view>
+</view>
