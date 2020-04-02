@@ -1,0 +1,85 @@
+<!--pages/find/find.wxml-->
+<view class="navbar" style='height:{{navH}}rpx'>
+  <view class='navbarH' style='height:{{navH}}rpx;'>
+   <view class='navbarCon acea-row row-center-wrapper'>
+    <view class="find_list">
+      <view class="find_li {{currentTab==0?'on':''}}" bindtap="checkTab"  data-tab="0">随便晒单</view>
+      <view class="find_li {{currentTab==1?'on':''}}" bindtap="checkTab"  data-tab="1">封面故事</view>
+    </view>
+
+   </view>
+  </view>
+</view>
+
+<view style='position:relative; top:{{navH}}rpx'>
+    <view class="find_cont {{currentTab == 0 ? '' : 'find-hide'}}">
+      <!-- 瀑布流　s -->
+        <view class='case-page'>
+          <view class='list-masonry'>
+            <view class='item-masonry' bindtap="goDetail" data-item="{{item}}" wx:for="{{newsList1}}" wx:key="ID" data-id="{{item.ID}}">
+              <image src='{{item.Cover}}' mode='widthFix'></image>
+              <view class="list-masonry-info">
+                <view class="title">{{item.Title}}</view>
+                <view class="masonry_info">
+                  <view class="masonry_user">
+                    <image src='{{item.AdminImage}}'></image>
+                    <view class="masonry_name">{{item.AdminName}}</view>
+                  </view>
+                  <view class="masonry_num" catchtap="give" data-item="{{item}}">
+                    <view class="zan_icon {{item.IsGive?'zan_icon_active':''}}"></view>
+                    <view class="give-num">{{item.GiveNum}}</view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class='list-masonry'>
+            <view class='item-masonry' bindtap="goDetail" data-item="{{item}}" wx:for="{{newsList2}}" wx:key="ID" data-id="{{item.ID}}">
+              <image src='{{item.Cover}}' mode='widthFix'></image>
+              <view class="list-masonry-info">
+                <view class="title">{{item.Title}}</view>
+                <view class="masonry_info">
+                  <view class="masonry_user">
+                    <image src='{{item.AdminImage}}'></image>
+                    <view class="masonry_name">{{item.AdminName}}</view>
+                  </view>
+                  <view class="masonry_num" catchtap="give" data-item="{{item}}">
+                    <view class="zan_icon  {{item.IsGive?'zan_icon_active':''}}"></view>
+                    <view class="give-num">{{item.GiveNum}}</view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      <!-- 瀑布流　e -->
+    </view>
+    <view class="find_cont {{currentTab == 1 ? '' : 'find-hide'}}" style="margin-top:80rpx">
+    <view class="{{fixed?'fixedTop':''}}"  id="news">
+    <scroll-view scroll-x="{{typeList.length>4}}" class="scroll_box" style='{{ "top: " + (fixed ? (navH) : "") + "rpx" }}'>
+      <view class="scroll_title" wx:for="{{typeList}}"  wx:key="ID" data-index="{{index}}" bindtap='change'>
+        <view class="wrap-type {{current  == index ? 'active': ' '}}">{{item.TypeName}}</view>
+      </view>
+    </scroll-view>
+    <view class='case-page '>
+      <view class='list-masonry'>
+        <view class='item-masonry' bindtap="goDetail" data-item="{{item}}" wx:for="{{newsList22}}" wx:key="ID" data-id="{{item.ID}}">
+          <image src='{{item.Cover}}' mode='widthFix'></image>
+          <view class="list-masonry-info">
+            <view class="title">{{item.Title}}</view>
+          </view>
+        </view>
+      </view>
+      <view class='list-masonry'>
+        <view class='item-masonry' bindtap="goDetail" data-item="{{item}}" wx:for="{{newsList33}}" wx:key="ID" data-id="{{item.ID}}">
+          <image src='{{item.Cover}}' mode='widthFix'></image>
+          <view class="list-masonry-info">
+            <view class="title">{{item.Title}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+    </view>
+</view>
+<authorize bind:onLoadFun='onLoadFun' isGoIndex='{{isGoIndex}}' iShidden="{{iShidden}}" isAuto="{{isAuto}}"></authorize>

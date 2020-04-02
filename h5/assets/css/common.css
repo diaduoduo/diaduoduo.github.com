@@ -14,11 +14,22 @@ body {
 input{
   border: 0;
 -webkit-appearance:none;
+-webkit-tap-highlight-color: transparent;
 }
+a:focus,
+input:focus,
+p:focus,
+div:focus{
+-webkit-tap-highlight-color:rgba(0,0,0,0);
+-webkit-user-modify:read-write-plaintext-only; 
+
+}
+input:focus { outline: none; } 
 body {
   font-family: "microsoft yahei";
 }
 
+body{ -webkit-tap-highlight-color:rgba(0,0,0,0); }
 .swiper-container {
   /*  width: 320px;
     height: 480px;*/
@@ -239,6 +250,7 @@ img {
   background-size: 1.24rem 1.24rem;
   width: 1.24rem;
   height: 1.24rem;
+  z-index: 100;
 }
 @-webkit-keyframes arrowing {
   0% {
@@ -450,9 +462,9 @@ input::-webkit-input-placeholder {
 }
 .preview_icon span:nth-child(1) {
   background: url(../../assets/images/icon_preview@2x.png);
-  width: 0.54rem;
-  height: 0.54rem;
-  background-size: 0.54rem 0.54rem;
+  width: 0.44rem;
+  height: 0.44rem;
+  background-size: 0.44rem 0.44rem;
   display: block;
   margin: 0 auto;
   margin-top:0.1rem;
@@ -462,7 +474,7 @@ input::-webkit-input-placeholder {
   font-family: PingFang SC;
   font-weight: 400;
   color: rgba(43, 43, 43, 1);
-  margin-top: -2px;
+  margin-top: -1px;
   display: block;
 }
 
@@ -476,9 +488,9 @@ input::-webkit-input-placeholder {
 }
 .set_icon span:nth-child(1) {
   background: url(../../assets/images/set.png);
-  width: 0.54rem;
-  height: 0.54rem;
-  background-size: 0.54rem 0.54rem;
+  width: 0.44rem;
+  height: 0.44rem;
+  background-size: 0.44rem 0.44rem;
   display: block;
   margin: 0 auto;
     margin-top:0.1rem;
@@ -488,7 +500,7 @@ input::-webkit-input-placeholder {
   font-family: PingFang SC;
   font-weight: 400;
   color: rgba(43, 43, 43, 1);
-  margin-top: -2px;
+  margin-top: -1px;
   display: block;
 }
 
@@ -581,9 +593,27 @@ box-shadow: none;
     right: .3rem;
     top: .2rem;
 }
-.rotate{
+.rotate-music{
     -webkit-animation: player 3s infinite linear;
     animation: player 3s infinite linear;
+}
+.music-play{
+  position: fixed;
+    z-index: 14;
+    width: .84rem;
+    height: .84rem;
+    right: .3rem;
+    top: .2rem;
+}
+.music-play img{
+  width:100%;
+  height:100%
+}
+.music_list{
+  overflow: hidden;
+  width: 100%;
+  border-bottom: #f5f5f5 solid 0.01rem;
+  padding: 7px 0;
 }
 @keyframes player {
     0% {
@@ -595,4 +625,174 @@ box-shadow: none;
 }
 .state .photo_btn,.state .editor_btn,.state .templatedetailsbtns{
   display: none;
+}
+
+.mask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: .4;
+    z-index: 1;
+}
+.mask_body{
+  position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 378px;
+    z-index: 1000;
+    background: #fff;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+.music_list li{
+    overflow: hidden;
+    width: 100%;
+    border-bottom: #f5f5f5 solid 0.01rem;
+    padding: 13px 0;
+    text-indent: .5rem;
+    position: relative;
+}
+.music_list li.cur{
+  color: #A9516F
+}
+.music_list li.cur span{
+  background:url(../../assets/images/icon_tick@2x.png) no-repeat;
+  width: .28rem;
+  height: .28rem;
+  background-size: .28rem .28rem;
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 16px;
+}
+.fadeIns{
+  -webkit-animation-name: fadeIns;
+    animation-name: fadeIns;
+}
+.closed{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  /* top: 50%; */
+  /* left: 50%; */
+  /* margin: -8px 0 0 -5px; */
+  right: 4px;
+  top: 9px;
+  z-index: 31;
+}
+.closed:after,.closed:before{
+  position: absolute;
+  content: "";
+  top: 2px;
+  left: 7px;
+  width: 2px;
+  height: 20px;
+  background: #fff;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  z-index: 39;
+}
+.closed:before{
+      -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.icon_upload,.editor_btn{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 100;
+  margin: -0.62rem 0 0 -0.62rem;
+}
+.btn_ani{
+   animation: fadeIn 0.5s 1 0.5s normal both,scaleDraw 5s infinite normal both running 1s;
+}
+@keyframes fadeIns{
+    0% {
+      bottom: -390px;
+  }
+
+  100% {
+      bottom: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+}
+  100% {
+      opacity: 1;
+  }
+}
+   @keyframes scaleDraw {  /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+            0%{
+                transform: scale(1);  /*开始为原始大小*/
+            }
+            25%{
+                transform: scale(1.1); /*放大1.1倍*/
+            }
+            50%{
+                transform: scale(1);
+            }
+            75%{
+                transform: scale(1.1);
+            }
+        }
+/* loading 加载　 */
+.loader {position: relative;width: 60px;height: 60px;border-radius: 50%;margin: 75px;display: inline-block;vertical-align: middle;position: absolute;left: 50%;top: 50%;margin: -30px 0 0 -30px;}
+.loader-star { position: absolute; top: calc(50% - 12px); }
+.loadering {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    color: inherit;
+    vertical-align: middle;
+    pointer-events: none;
+}
+.loading_box{
+  background: #efdbe2;;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom:0;
+  top:0;
+  z-index: 999;
+}
+.loader-13 .css-heart { position: absolute; -webkit-animation: star-fly-out 1s ease alternate infinite; animation: star-fly-out 1s ease alternate infinite; -webkit-transform: scale(0.2); transform: scale(0.2); }
+.loader-13 .heart1 { top: 0; left: 30px; }
+.loader-13 .heart2 { left: 60px; top: 30px; }
+.loader-13 .heart3 { top: 60px; left: 30px; }
+.loader-13 .heart4 { left: 0; top: 30px; }
+.css-heart:before,  .css-heart:after { position: absolute; content: ""; left: 50px; top: 0; width: 50px; height: 80px; background: #950d0d; border-radius: 50px 50px 0 0; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); -webkit-transform-origin: 0 100%; transform-origin: 0 100%; }
+.css-heart:after { left: 0; -webkit-transform: rotate(45deg); transform: rotate(45deg); -webkit-transform-origin: 100% 100%; transform-origin: 100% 100%; }
+ @-webkit-keyframes star-fly-out {
+ 0% {
+ top: 19px;
+ left: 19px;
+}
+ 100% {
+}
+}
+ @keyframes star-fly-out {
+ 0% {
+ top: 19px;
+ left: 19px;
+}
+ 100% {
+}
 }

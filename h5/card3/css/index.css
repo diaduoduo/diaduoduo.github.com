@@ -27,7 +27,7 @@ html, body {
     right: 0.2rem;
     width: 0.8rem;
     height: 0.8rem;
-    z-index: 1223342;
+    z-index: 88;
 }
 
 .rotate-music {
@@ -735,15 +735,11 @@ html, body {
 .wrap-s1-content{
     position: fixed;
     width: 6rem;
-    top:1rem;
+    top: 1rem;
     z-index: 26;
-    left:50%;
-    -webkit-transform: translate(-50%,0);
-    -moz-transform: translate(-50%,0);
-    -ms-transform: translate(-50%,0);
-    -o-transform: translate(-50%,0);
-    transform: translate(-50%,0);
+    left: 50%;
     height: 9.6rem;
+    margin-left: -3rem;
 }
 .s1-bg2{
     position: absolute;
@@ -825,7 +821,7 @@ html, body {
 }
 .s1-time{
     position: absolute;
-    top: 66%;
+    top: 63%;
     white-space: nowrap;
     left:50%;
     width: 4rem;
@@ -834,6 +830,22 @@ html, body {
     font-size: 0.3rem;
     font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: normal;
+}
+.s1-address{
+    position: absolute;
+    top: 70%;
+    white-space: nowrap;
+    left:50%;
+    width: 4rem;
+    text-align: center;
+    margin-left: -2rem;
+    font-size: 0.3rem;
+    font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+}
+.font-pose{
+    width: 50%;
+    margin:0 auto;
 }
 .s1-name1{
     position: absolute;
@@ -1077,23 +1089,19 @@ html, body {
     position: absolute;
     width: 4rem;
     height: 4rem;
-    left: 1.75rem;
-    top:1.3rem;
+    /* left: 1.75rem; */
+    /* top:1.3rem; */
     padding: 2px;
     background-color: #fff;
     border-radius: 50%;
     overflow: hidden;
 }
 .s3-img2{
-    height: 100%;
-    position: absolute;
+    /* height: 100%; */
+    /* position: absolute; */
     left: 50%;
-    top: 0;
-    -webkit-transform: translate(-50%,0);
-    -moz-transform: translate(-50%,0);
-    -ms-transform: translate(-50%,0);
-    -o-transform: translate(-50%,0);
-    transform: translate(-50%,0);
+    /* top: 0; */
+    margin-left: -2rem;
 }
 .s3-img3{
     position: absolute;
@@ -1122,12 +1130,13 @@ html, body {
     position: absolute;
     width: 100%;
     text-align: center;
-    top: 8.3rem;
+    top: 0;
     font-family: fangzheng_ktjt;
     font-size: 0.3rem;
     color: rgb(158, 104, 32);
     font-weight: normal;
     line-height: 1.6;
+    left: 0;
 }
 .s3-img5{
     position: absolute;
@@ -1293,32 +1302,32 @@ html, body {
 .s5-img8{
     position: absolute;
     width: 5.5rem;
-    top:2.8rem;
-    left: 1rem;
+    top: 0;
+    left: 0;
     border:1px solid rgb(158, 104, 32);
 }
 
 .s5-img9{
     position: absolute;
     width: 1.7rem;
-    top:6.8rem;
-    left: 1rem;
+    top: 0;
+    left: 0;
     border:1px solid rgb(158, 104, 32);
     height: 2.6rem;
 }
 .s5-img10{
     position: absolute;
     width: 1.7rem;
-    top:6.8rem;
-    left: 2.9rem;
+    top:0;
+    left: 0;
     border:1px solid rgb(158, 104, 32);
     height: 2.6rem;
 }
 .s5-img11{
     position: absolute;
     width: 1.7rem;
-    top:6.8rem;
-    left: 4.8rem;
+    top:0;
+    left: 0;
     border:1px solid rgb(158, 104, 32);
     height: 2.6rem;
 }
@@ -1361,61 +1370,96 @@ html, body {
   height: 9rem;
 }
 .icon_upload {
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  background: #f83244;
   position: absolute;
   left: 50%;
   top: 50%;
   margin: -0.5rem 0 0 -0.5rem;
   z-index: 999;
 }
-.upload_pic{
+.upload_pic1{
    position: absolute;
+   left: 50%;
+   top: 0;
+   width: 3rem;
+   height: 3rem;
+   border-radius: 50%;
+   margin-left: -1.5rem;
+}
+.upload_pic2{
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    left: 1.75rem;
+    top: 1.3rem;
+    padding: 2px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.upload_pic3{
+    position: absolute;
+    width: 5.5rem;
+    top: 2.8rem;
+    left: 1rem;
+    height: 3.9rem;
+}
+.upload_pic4{
+    position: absolute;
+    width: 1.7rem;
+    top: 6.8rem;
+    left: 1rem;
+    height: 2.6rem;
+}
+.upload_pic5{
+    position: absolute;
+    width: 1.7rem;
+    top: 6.8rem;
+    left: 2.9rem;
+    height: 2.6rem;
+}
+.upload_pic6{
+    position: absolute;
+    width: 1.7rem;
+    top: 6.8rem;
+    left: 4.8rem;
+    height: 2.6rem;
+}
+.upload_pic7{
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: 2.3rem;
+    left: 1.25rem;
+    overflow: hidden;
+
+}
+.s6-img1{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 5rem;
+    height: 5rem;
+    border: 0.01rem solid rgb(158, 104, 32);
+    box-sizing: border-box;
+}
+.edit_pos1{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 8.3rem;
+    font-family: fangzheng_ktjt;
+    font-size: 0.3rem;
+    color: rgb(158, 104, 32);
+    font-weight: normal;
+    line-height: 1.6;
+}
+.edit_btn {
+    /* width: 1rem; */
+    /* height: 1rem; */
+    border-radius: 50%;
+    /* background: #f83244; */
+    position: absolute;
     left: 50%;
     top: 50%;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%; 
-}
-.upload_pic .icon_upload{
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    background: #f83244;
-    position: absolute;
     margin: -0.5rem 0 0 -0.5rem;
     z-index: 999;
-    left: 0;
-    top: 0
 }
-.upload_pic .top-img{
-    left: 0;
-    top: 0
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

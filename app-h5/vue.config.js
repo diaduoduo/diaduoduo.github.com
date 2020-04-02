@@ -1,3 +1,3 @@
-module.exports={
-    publicPath:process.env.baseUrl
+module.exports = {
+    publicPath: process.env.baseUrl
 }

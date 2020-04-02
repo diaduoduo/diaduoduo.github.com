@@ -1,0 +1,44 @@
+<!--pages/news/news.wxml-->
+<view class="navbar" style='height:{{navH}}rpx'>
+  <view class='navbarH' style='height:{{navH}}rpx;'>
+   <view class='navbarCon acea-row row-center-wrapper'>
+    <image class="arrow_icon" bindtap="back_btn" src="/images/shop/icon_back@2x.png"></image>
+    <view class="find_list">
+      <view class="find_li">{{info.NewsTypeName}}</view>
+    </view>
+   </view>
+  </view>
+</view>
+<view style='position:relative; top:{{navH}}rpx'>
+<view style="position:relative" wx:if="{{condition}}">
+  <swiper   style="height:{{imgheights[current]}}rpx;" mode="widthFix" bindchange="change" circular data-info="{{info}}" data-src="{{item.FilePath}}">
+    <block wx:for="{{info.SYSAttachs}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item.FilePath}}" data-src="{{item.FilePath}}" bindload="imageLoad"  class="slide-image" mode="widthFix" data-index='{{index}}'  style="height:{{imgheights[current]}}rpx;width:{{imgwidth}}rpx;"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="swiper_nums">{{index+1}}/{{info.SYSAttachs.length}}</view>
+  <view class="dots">
+    <block wx:for="{{info.SYSAttachs}}" wx:key="*">
+      <view class="dot{{index == current ? ' active' : ''}}"></view>
+    </block>
+  </view> 
+</view>
+  <video wx:else id="myVideo" src="{{info.VideoUrl}}" enable-danmu danmu-btn controls></video>
+  <view class="diary_header">
+    <image class="header_img" src="{{info.AdminImage}}"></image>
+    <view class="header_name">{{info.AdminName}}</view>
+
+    <view class="masonry_num" catchtap="give" data-item="{{item}}">
+      <view class="zan_icon {{item.IsGive?'zan_icon_active':''}}"></view>
+      <view class="give-num">{{info.GiveNum}}</view>
+    </view>
+  </view>
+  <view class="diary_body">
+    <view class="diary_title">{{info.Title}}</view>
+    <view class="diray_content">
+      {{info.Remarks}}
+    </view>
+  </view>
+</view>

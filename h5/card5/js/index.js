@@ -20,11 +20,11 @@
                 function (res) {
                     console.log(res)
                     document.title = res.ReturnObject.Title;
+                    $('.music_src').attr('src', res.ReturnObject.MusicUrl);
                     $(".men_name").html(res.ReturnObject.GroomName);
                     $(".gril_name").html(res.ReturnObject.BridesName);
                     $(".WeddingTime").html(res.ReturnObject.WeddingTime);
                     $(".WeddingAddress").html(res.ReturnObject.WeddingAddress);
-                    $(".source").attr("src", res.ReturnObject.MusicUrl)
                     $("[custom-type-img]").each(function () {
                         var imgnum = $(this).attr("custom-type-img");
                         var attach = res.ReturnObject.SYSAttachs.find(function (item) {
@@ -43,7 +43,7 @@
                         }
                     });
                     $(".start_btns").click(function () {
-                        window.location.href = "address.html?id=" + res.ReturnObject.ID;
+                        window.location.href = "address.html?id=" + res.ReturnObject.ID + "&MusicLibraryID=" + res.ReturnObject.MusicLibraryID;
                     });
                 }
             )
@@ -65,10 +65,12 @@
             },
             function (res) {
                 console.log(res);
+                $('.music_src').attr('src', res.ReturnObject.MusicUrl);
                 $(".men_name").html(res.ReturnObject.GroomName);
                 $(".girl_name").html(res.ReturnObject.BridesName);
                 $(".WeddingTime").html(res.ReturnObject.WeddingTime);
                 $(".WeddingAddress").html(res.ReturnObject.WeddingAddress);
+                
                 var showtime = res.ReturnObject.WeddingTime.substring(0, 10);
                 content = "我们将在" + showtime + "举行婚礼诚挚邀请您的到来";
                 title = res.ReturnObject.GroomName + "&" + res.ReturnObject.BridesName + "的婚礼邀请";
@@ -106,7 +108,7 @@
                     obj.uploadImg(res.ReturnObject.ID, ratio, pose);
                 })
                 $(document).on("click", ".set_icon", function () {
-                    window.location.href = "address.html?addressId=" + res.ReturnObject.ID;
+                    window.location.href = "address.html?addressId=" + res.ReturnObject.ID + "&MusicLibraryID=" + res.ReturnObject.MusicLibraryID;
                 });
 
             }
@@ -117,7 +119,10 @@
           var shareurl = helpClass.prodUrl + "card5/index.html?shareid=" + userTemplateID;
           console.log(url)
           console.log(shareurl)
-       // obj.preview(title, content, url, shareurl)
+          var audio = document.querySelector("#audio");
+           audio.pause();
+           $(".icon-music").removeClass("rotate-music");
+        obj.preview(title, content, url, shareurl)
       });
       // 编辑文字
         $.fn.autoHeight = function () {
@@ -207,6 +212,7 @@
             function (res) {
                 console.log(res.ReturnObject);
                 document.title = res.ReturnObject.GroomName + "&" + res.ReturnObject.BridesName + "的婚礼邀请";
+                $('.music_src').attr('src', res.ReturnObject.MusicUrl);
                 $(".men_name").html(res.ReturnObject.GroomName);
                 $(".girl_name").html(res.ReturnObject.BridesName);
                 $(".WeddingTime").html(res.ReturnObject.WeddingTime);
@@ -251,6 +257,7 @@
             function (res) {
                 console.log(res.ReturnObject);
                 document.title = res.ReturnObject.GroomName + "&" + res.ReturnObject.BridesName + "的婚礼邀请";
+                $('.music_src').attr('src', res.ReturnObject.MusicUrl);
                 $(".men_name").html(res.ReturnObject.GroomName);
                 $(".girl_name").html(res.ReturnObject.BridesName);
                 $(".WeddingTime").html(res.ReturnObject.WeddingTime);
@@ -318,7 +325,14 @@
               })
 
       })
-
+            document.body.addEventListener('focusout', () => {
+                // 回到原点  若觉得一瞬间回到底部不够炫酷，那自己可以自定义缓慢回弹效果， 可用css 、贝塞尔曲线、js的 requestAnimationFrame  等等 方法 实现体验性更好的回弹效果
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                })
+            })
     }
 
    

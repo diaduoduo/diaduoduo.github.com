@@ -1,0 +1,802 @@
+html, body {
+    background-color: #faaba7;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.full {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.icon-music {
+    position: fixed;
+    top: 0.2rem;
+    right: 0.2rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    z-index: 1223342;
+}
+
+.rotate-music {
+    -webkit-animation: rotate_music 3s infinite linear;
+    -o-animation: rotate_music 3s infinite linear;
+    animation: rotate_music 3s infinite linear;
+}
+
+@keyframes rotate_music {
+    from {
+        -webkit-transform: rotate(-360deg);
+        -moz-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+    to {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+.u-arrow-bottom {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 12345;
+    width: 24px;
+    height: 14px;
+    margin-left: -7px;
+}
+
+.pre-wrap-bottom {
+    width: 24px;
+    height: 14px;
+    position: relative;
+    -webkit-animation: start 1.5s infinite ease-in-out;
+    -o-animation: start 1.5s infinite ease-in-out;
+    animation: start 1.5s infinite ease-in-out;
+}
+
+.pre-box1, .pre-box2 {
+    height: 15px;
+    width: 11px;
+    position: absolute;
+    top: -5px;
+}
+
+.pre-box2 {
+    left: 11px;
+}
+
+.pre1, .pre2 {
+    background-color: #fff;
+    width: 14px;
+    height: 5px;
+    border-radius: 2px;
+    position: absolute;
+    box-shadow: 1px -1px 1px #646464;
+}
+
+.pre1 {
+    -webkit-transform: rotate(130deg);
+    -moz-transform: rotate(130deg);
+    -ms-transform: rotate(130deg);
+    -o-transform: rotate(130deg);
+    transform: rotate(130deg);
+}
+
+.pre2 {
+    left: -4.5px;
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    transform: rotate(50deg);
+}
+.fl_img1{
+    width: 5.6rem;
+    height: 5.6rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -2.8rem;
+    top: 2.1rem;
+}
+.wedding_title{
+    color: burlywood;
+    font-size: 0.6rem;
+    position: absolute;
+    top: 0.8rem;
+    width: 100%;
+    text-align: center;
+    height: .4rem;
+}
+.f1_img2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0
+}
+.f1_img3{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: 100%;
+}
+.wedding_title{
+    color: burlywood;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 0.8rem;
+    width: 100%;
+    text-align: center;
+    font-family: KaiTi;
+}
+.f1_img4{
+   width: 1.12rem;
+   height: .83rem;
+   position: absolute;
+   left: -0.41rem;
+   z-index: 1;
+   top: 1.8rem;
+}
+.f1_img5{
+    width: 2.28rem;
+    height: .99rem;
+    position: absolute;
+    right: -0.41rem;
+    z-index: 1;
+    bottom: 0.2rem;
+}
+.f1_font1{position: absolute;left: 0.7rem;top: .7rem;width: .87rem;height: .96rem;}
+.f1_font2{position: absolute;left: 1.9rem;top: .7rem;width: .87rem;height: .96rem;}
+.f1_font3{position: absolute;left: 3.4rem;top: .7rem;width: .87rem;height: .96rem;}
+.f1_font4{position: absolute;left: 4.7rem;top: .7rem;width: .87rem;height: .96rem;}
+.f1_font5{position: absolute;left: 6rem;top: .7rem;width: .87rem;height: .96rem;}
+.f1_img6{
+   width: 4.87rem;
+   height: 1.03rem;
+   position: absolute;
+   left: 50%;
+   margin-left:-2.435rem;
+   top: 8rem;
+}
+.f1_img7{
+    width: .42rem;
+    height: .35rem;
+    position: absolute;
+    left: 50%;
+    margin-left:-0.21rem;
+    top:8.4rem;
+}
+.f1_img8{
+    width: 7.08rem;
+    height: .7rem;
+    position: absolute;
+    left: 50%;
+    top:9.3rem;
+    margin-left:-3.54rem;
+}
+.men_name{
+    display: block;
+    position: absolute;
+    width: 2.40rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: right;
+    left: 0.7rem;
+    top: 8.1rem;
+    font-size: .5rem;
+    color: #ffc78f;
+    font-family: KaiTi;
+}
+.girl_name{
+    display: block;
+    position: absolute;
+    width: 2.40rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: left;
+    right: 0.7rem;
+    top: 8.1rem;
+    font-size: .5rem;
+    color: #ffc78f; 
+    font-family: KaiTi;
+}
+.address_box{
+    color: #ffc78f;
+    width: 90%;
+    left:50%;
+    margin-left:-45%;
+    position: absolute;
+    font-size: .4rem;
+    top: 10.2rem;
+    text-align: center;
+    font-family: KaiTi;
+}
+.f2_img1{
+    position: absolute;
+    left: .5rem;
+    top: 0.8rem;
+    width: 1.38rem;
+    height: .69rem;
+}
+.f2_img2{
+    position: absolute;
+    left: .5rem;
+    top: 2.8rem;
+    width: 1.46rem;
+    height: 5.36rem;
+}
+.f2_img3,
+.f2_img4,
+.f2_img5,
+.f2_img6{
+    position: absolute;
+    left: .6rem;
+}
+.f2_img3{
+    top: 2.8rem;
+    width: 1.08rem;
+    height: 1.2rem;
+}
+.f2_img4{
+        top: 4.2rem;
+        width: .99rem;
+        height: 1.2rem;
+}
+.f2_img5{
+        top: 5.6rem;
+        width: .99rem;
+        height: 1.2rem;
+}
+.f2_img6{
+      top: 6.9rem;
+      width: .99rem;
+      height: 1.2rem;
+}
+.f2_img7{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.f2_img8{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+.f2_font1{
+    width: 100%;
+    position: absolute;
+    top: 10rem;
+    right: 0.1rem;
+    color: #ffc78f;
+    font-size: .28rem;
+    top: 0;
+    text-align: left;
+}
+.f2_img9{
+    position: absolute;
+    left: 1.5rem;
+    top: 8.8rem;
+    width: 1.38rem;
+    height: .31rem;
+}
+
+.f3_img1{
+    width: 4.01rem;
+    height: 5.2rem;
+    position: absolute;
+    left: 0.3rem;
+    top: 0.8rem;
+    overflow: hidden;
+}
+.f3_img2{
+    width: 100%;
+    height: 100%;
+}
+.f3_img3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.f3_img4{
+    left:inherit;
+    right: .5rem;  
+}
+.f3_img5{
+    position: absolute;
+    width: .55rem;
+    height: 3.88rem;
+    right: 1.5rem;
+    top: 2.5rem;
+}
+.f3_img6{
+    position: absolute;
+    width: 1.27rem;
+    height: .63rem;
+    left: 3.5rem;
+    top: 5.5rem; 
+}
+.f3_img7{
+    width: 2.81rem;
+    height: 1.49rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 8rem;
+}
+.f3_font{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    font-size: 0.35rem;
+    color: #f3a658;
+    overflow: hidden;
+}
+.f3_img8{
+    width: 2.04rem;
+    height: 2.04rem;
+    position: absolute;
+    left: 0.3rem;
+    bottom: 1rem;
+}
+.f3_img9{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right:0;
+    top:0;
+    bottom:0
+}
+.f3_img10{
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.f3_img11{
+    width: 2.04rem;
+    height: 2.04rem;
+    position: absolute;
+    left: 2.7rem;
+    bottom: 1rem;
+}
+.f3_img12{
+    width: 2.04rem;
+    height: 2.04rem;
+    position: absolute;
+    right: 0.3rem;
+    bottom: 1rem;
+}
+.f4_img1{
+    position: absolute;
+    left: 0.3rem;
+    top: 0.5rem;
+}
+.f4_img2{
+    position: absolute;
+    width: 5.28rem;
+    height: .03rem;
+    right: 0.3rem;
+    top: .9rem; 
+}
+.f4_img3{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+.f4_img4{
+    position: absolute;
+    left: 0.5rem;
+    width: 6.03rem;
+    height: .03rem;
+    top: 6.2rem;
+}
+.f4_img5{
+    position: absolute;
+    right: 0.3rem;
+    width: .68rem;
+    height: .54rem;
+    top: 5.8rem;
+}
+.f4_img6{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;   
+}
+.f4_img7{
+    position: absolute;
+    width: 2.35rem;
+    height: 2.36rem;
+    right: 0.3rem;
+    top: 8.5rem; 
+}
+.f4_font{
+position: absolute;
+    width: 2.35rem;
+    height: 2.36rem;
+    right: 0.3rem;
+    top: 8.5rem;
+    font-size: 0.25rem;
+    color: whitesmoke;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+.f4_img8{
+   left: 4rem;
+   right: auto;
+   top: 10.5rem;
+}
+.f4_img9{
+    position: absolute;
+    width: .96rem;
+    height: .48rem;
+    left: auto;
+    top: 8.1rem;
+    right: 0.1rem;
+}
+.f5_img3{
+    position: absolute;
+    width: 6.22rem;
+    height: 4.12rem;
+    left: 50%;
+    top: 0.8rem;
+    margin-left: -3.11rem;
+}
+.f5_img1{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+}
+.f5_img2{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     left: 0%;
+     top: 0%;
+}
+.f5_img4{
+    top: 7rem;
+}
+.f5_img5{
+    width: 5.5rem;
+    height: 1.03rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -2.75rem;
+    top: 5.4rem;
+}
+.f5_img6{
+    width: 5.5rem;
+    height: 1.03rem;
+    line-height: 1.03rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -2.75rem;
+    top: 5.4rem;
+    font-size: .5rem;
+    color: #ffc78f;
+    font-family: KaiTi;
+    text-align: center;
+}
+.f5_img7{
+    width: 2.28rem;
+    height: .99rem;
+    position: absolute;
+    right: 0.1rem;
+    z-index: 1;
+    bottom: 0.5rem;
+}
+.f6_img1{
+    position: absolute;
+    left: 1rem;
+    top: 1.5rem;
+    width: .83rem;
+    height: 3rem;
+}
+.f6_q1{
+    width: .83rem;
+    height: .83rem;
+    text-align: center;
+    line-height: 0.83rem;
+    background: url(../images/30.png) no-repeat;
+    background-size:100% auto;
+    font-size: 0.5rem;
+    color: #f2a156;
+    margin-top: -7px;
+}
+.f6_img2{
+    width: 5.21rem;
+    height: 5.91rem;
+    position: absolute;
+    right:0;
+    top:0
+}
+.f6_img4{
+      width: 5.21rem;
+    height: 5.91rem;
+    position: absolute;
+    right:0;
+    top:0 ;
+    -webkit-mask-image: url(http://qnm.hunliji.com/o_1bld7er678ft1v6f12lotoajn3a3.png);
+    -webkit-mask-size: 100% 100%;
+}
+.f6_img3{
+          width: 5rem;
+          height: 5.71rem;
+          position: absolute;
+          right:0;
+          top:0;
+          -webkit-mask-image: url(http://qnm.hunliji.com/o_1bld7eovs1or51hcd1tci1rc28up9u.png);
+          -webkit-mask-size: 100% 100%;
+}
+.f6_img5{
+    position: absolute;
+    right: 1rem;
+    top: 8.5rem;
+    width: .83rem;
+    height: 3rem;
+}
+.f6_img6{
+       width: 5.21rem;
+    height: 5.91rem;
+    position: absolute;
+    left:0;
+    bottom:0 
+}
+.f6_img7{
+    width: 5rem;
+    height: 5.71rem;
+    position: absolute;
+    left:0;
+    bottom:0;
+     -webkit-mask-image: url(http://qnm.hunliji.com/o_1bld7er678ft1v6f12lotoajn3a3.png);
+    -webkit-mask-size: 100% 100%;   
+}
+.f6_img8{
+    width: .66rem;
+    height: .69rem;
+    position: absolute;
+    left: 50%;
+    top: 5.3rem;
+}
+.f6_img9{
+    width: .66rem;
+    height: .69rem;
+    position: absolute;
+    left: 50%;
+    top: 6.8rem;
+}
+.f6_img10{
+width: .42rem;
+    height: .36rem;
+    position: absolute;
+    left: 50%;
+    top: 6.2rem;  
+    margin-left: 0.1rem;
+}
+.f7_img1{
+      width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom:0; 
+}
+.f7_img2,
+.f7_img3,
+.f7_img4,
+.f7_img5{
+    position: absolute;
+    right: 0;
+}
+.f7_img2{
+    width: 1.86rem;
+    height: 2.2rem;
+    bottom: 3.8rem;
+    right: 1rem;
+}
+.f7_img3{
+    width: 1.12rem;
+    height: 1.04rem;
+    right: 0.3rem;
+    bottom: 3.3rem;
+}
+.f7_img4{
+    width: 0.97rem;
+    height: 1.4rem;
+    bottom: 2.2rem;
+    right: 1.3rem;
+}
+.f7_img5{
+    width: 1.2rem;
+    height: 1.63rem;
+    bottom: 1rem;
+    right: 0.5rem;
+}
+.f7_img6{
+    width: 1.26rem;
+    height: .56rem;
+    position: absolute;
+    right: 0.1rem;
+    z-index: 1;
+    bottom: 5rem;
+}
+.upload_pic1{
+    width: 98%;
+    height: 98%;
+    position: absolute;
+    left: 1.5%;
+    top: 1%;
+    border-radius: 100%;
+}
+.upload_pic2{
+    width: 4.65rem;
+    height: 2.98rem;
+    position: absolute;
+    top: 1.8rem;
+    right: 0.5rem;
+    border-top-left-radius: .2rem;
+    border-top-right-radius: .2rem;
+    z-index: 1;
+    overflow: hidden;
+}
+.upload_pic3{
+        width: 4.65rem;
+    height: 5.96rem;
+    position: absolute;
+    top: 4.3rem;
+    right: 0.5rem;
+    border-bottom-left-radius: .2rem;
+    border-bottom-right-radius: .2rem;
+      overflow: hidden;
+}
+.upload_pic4{
+      position: absolute;
+    width: 3.73rem;
+    height: 4.92rem;
+    left: 0.15rem;
+    top: 0.15rem;  
+}
+.upload_pic5{
+      position: absolute;
+    border-radius: 50%;
+    left: 0.15rem;
+    top: 0.15rem;
+    width: 1.74rem;
+    height: 1.74rem;  
+}
+
+.upload_pic6{
+    position: absolute;
+    border-radius: 50%;
+    left: 0.15rem;
+    top: 0.15rem;
+    width: 1.74rem;
+    height: 1.74rem; 
+}
+
+.upload_pic7{
+    position: absolute;
+    border-radius: 50%;
+    left: 0.15rem;
+    top: 0.15rem;
+    width: 1.74rem;
+    height: 1.74rem; 
+}
+@keyframes slideInUp {
+    0% {
+        -webkit-transform: translateY(200%);
+        -ms-transform: translateY(200%);
+        transform: translateY(200%);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+.upload_pic8{
+      position: absolute;
+    left: 50%;
+    width: 6.56rem;
+    height: 4.12rem;
+    margin-left: -3.28rem;
+    top: 1.5rem;  
+}
+.upload_pic9{
+        position: absolute;
+    left: 0.5rem;
+    width: 4.06rem;
+    height: 5.2rem;
+    top: 6.8rem;   
+}
+.upload_pic10{
+       position: absolute;
+    width: 5.8rem;
+    height: 3.7rem;
+    left: 50%;
+    top: 0.22rem;
+    margin-left: -2.9rem; 
+}
+.upload_pic11{
+         position: absolute;
+     width: 5.8rem;
+     height: 3.7rem;
+     left: 50%;
+     top: 0.22rem;
+     margin-left: -2.9rem;
+}
+.upload_pic12{
+        width: 5rem;
+    height: 5.71rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+.upload_pic13{
+    width: 5rem;
+    height: 5.71rem;
+    position: absolute;
+    left: 0;
+    bottom: 0; 
+}
+.upload_pic14{
+        width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom:0;   
+}
+.edit_pos1{
+       width: 4.65rem;
+       position: absolute;
+       top: 10rem;
+       right: 0.5rem;
+       color: #ffc78f;
+       font-size: .28rem;
+       top: 10.6rem;
+       text-align: left;
+       height: 2rem;
+       overflow: hidden;
+}
+.edit_pos2{position: absolute;width: 4.27rem;left: 0.5rem;top: 7rem;font-size: 0.35rem;color: #f3a658;overflow: hidden;height: 3rem;/* background: red; */}

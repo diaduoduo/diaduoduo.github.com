@@ -1,0 +1,105 @@
+<!--pages/store/store.wxml-->
+<wxs module="filters">
+var fnToFixed = function(num){
+    num = num.toFixed(1);
+    return num;
+}
+module.exports = {
+    fnToFixed : fnToFixed,
+}
+</wxs>
+
+<view class="navbar" style='height:{{navH}}rpx'>
+  <view class='navbarH' style='height:{{navH}}rpx;'>
+   <view class='navbarCon acea-row row-center-wrapper'>
+        <view class="nav_title" catchtap='selectTap' data-cityfid="{{distanctag==0?-1:shoplist.SYSAreas[index].F_Id}}">
+        {{status==0?shoplist.SYSAreas[index].F_FullName:"距离最近"}}
+        <view class="arrow_icon {{show&&'select_img_rotate'}}"></view>
+        </view>
+         <view class="mask {{showmask?'fadeIn':''}}" style=' top:{{navH}}rpx' wx:if="{{showmask}}" catchtouchmove="noScroll" bindtap='close'></view>
+        <view class="city_box" wx:if="{{select}}">
+          <view class="distance_tag" bindtap="distance" data-text="距离最近">
+          <image class="tag_icon" src="/images/shop/icon_gp@2x.png"></image>
+          距离最近</view>
+         
+          <view class="city_ul">
+            <view class="city_li {{currentLi==index?'on':''}}" wx:for='{{shoplist.SYSAreas}}' wx:key data-F_Id="{{item.F_Id}}"  data-index='{{index}}' catchtap='optionTap' data-tab="{{index}}">{{item.F_FullName}}</view>
+          </view>
+        </view>
+   </view>
+  </view>
+</view>
+<view class="store_box" style='position:relative; top:{{navH}}rpx'>
+  <!-- <view class="store_brand">
+      <view class="store_ul">
+      <view class="store_li {{currentTab==index?'on':''}}" bindtap="Merchants" wx:for="{{shoplist.Merchants}}" wx:key data-MerchantIDs="{{item.ID}}" data-index='{{index}}' data-tab="{{index}}"><view class="title">{{item.MerchantName}}</view></view>
+    </view>
+  </view> -->
+
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:key="*this">
+          <swiper-item>
+              <view class="store_brand">
+              <view class="line"></view>
+                  <view class="store_ul">
+                  <view class="storeline_ul">
+                    <view class="storeline_li"></view>
+                    <view class="storeline_li"></view>
+                    <view class="storeline_li"></view>
+                    <view class="storeline_li"></view>
+                    <view class="storeline_li"></view>
+                    <view class="storeline_li"></view>
+                    <view class="storeline_li"></view>
+                  </view>
+                  <view class="store_li {{currentTab==index?'on':''}}" bindtap="Merchants" wx:for="{{shoplist.Merchants}}" wx:key data-MerchantIDs="{{item.ID}}" data-index='{{index}}' data-tab="{{index}}" wx:if="{{index<8}}"><view class="title">{{item.MerchantName}}</view></view>
+                </view>
+              </view>
+          </swiper-item>
+          <swiper-item wx:if="{{shoplist.Merchants.length>9}}">
+              <view class="store_brand">
+                    <view class="line"></view>
+                  <view class="store_ul">
+                 <view class="storeline_ul">
+                    <view class="storeline_li"></view>
+                    <view class="storeline_li"></view>
+                    <view class="storeline_li"></view>
+                    <view class="storeline_li"></view>
+                    <view class="storeline_li"></view>
+                    <view class="storeline_li"></view>
+                    <view class="storeline_li"></view>
+                  </view>
+                  <view class="store_li {{currentTab==i?'on':''}}" bindtap="Merchants" wx:for-index="i" wx:if="{{i>=8}}"  wx:for="{{shoplist.Merchants}}" wx:key data-MerchantIDs="{{item.ID}}" data-index='{{i}}' data-tab="{{i}}"><view class="title">{{item.MerchantName}}</view></view>
+                </view>
+              </view>
+          </swiper-item>
+        </block>
+      </swiper>
+
+
+  <view class="store_brand_ul">
+  <view class="store_box_hidden" hidden="{{!showNoTips}}">
+    <view> 暂无门店</view>
+    <view>换个品牌或城市吧</view>
+  </view>
+    <view class="store_brand_li"  wx:for="{{shopinfo}}" wx:key>
+    <view class="store_imgs">
+      <image class="store_img" src="{{item.ShopPictrue}}"></image>
+      <view class="distance_box" wx:if="{{item.Distance>0}}" hidden="{{!distance}}">距离{{filters.fnToFixed(item.Distance/1000)}}km</view>
+
+    </view>
+      <view class="store_info">
+        <view class="store_name">{{item.Brand}}</view>
+        <view class="store_shop">{{item.Subheading}}</view>
+        <view class="store_time">营业时间 {{item.BusinessHours}}</view>
+        <view class="store_address">{{item.Address}}</view>
+        <view class="store_phone" bindtap='makePhoneCall' data-Mobile="{{item.Mobile}}">
+        <image class="store_icon" src="/images/shop/icon_tell@2x.png"></image>
+        {{item.Mobile}}</view>
+        <view class="store_map" bindtap="getLocation" data-address="{{item.address}}" data-Latitude="{{item.Latitude}}" data-Longitude="{{item.Longitude}}" data-storeName="{{item.StoreName}}">
+        <image  class="store_icon" src="/images/shop/scene_icon_gp@2x.png"></image>
+        门店地图</view>
+      </view>
+    </view>
+  </view>
+</view>

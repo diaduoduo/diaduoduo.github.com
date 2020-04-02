@@ -3109,3 +3109,31 @@ Copyright (c) 2015 Daniel Eden
     -webkit-animation-name: slideOutUp;
     animation-name: slideOutUp
 }
+@-webkit-keyframes rotate{
+    0% {
+        -webkit-transform: rotate(-360deg);
+        -webkit-transition-timing-function: linear;
+        transform: rotate(-360deg);
+        transition-timing-function: linear;
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        -webkit-transition-timing-function: linear;
+        transform: rotate(0deg);
+        transition-timing-function: linear;
+    }
+}
+@keyframes rotate{
+    0% {
+        -webkit-transform: rotate(-360deg);
+        -webkit-transition-timing-function: linear;
+        transform: rotate(-360deg);
+        transition-timing-function: linear;
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        -webkit-transition-timing-function: linear;
+        transform: rotate(0deg);
+        transition-timing-function: linear;
+    }
+}

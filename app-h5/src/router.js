@@ -154,6 +154,24 @@ let router=new Router({
             path: '/pay',
             name: 'pay',
             component: () => import('./views/pay.vue')
+        },
+        {
+            path: '/coupon',
+            name: 'coupon',
+            component: () => import('./views/coupon.vue')
+        },
+        {
+            path: '/couponResult',
+            name: 'couponResult',
+            component: () => import('./views/couponResult.vue')
+        },
+        {
+            path: '/chatwindow',
+            name: 'chatwindow',
+            component: () => import('./views/chatwindow.vue'),
+            meta:{
+                title: "韩国艺匠"
+            }
         }
     ]
 })

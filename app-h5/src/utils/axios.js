@@ -1,16 +1,20 @@
 import axios from "axios"
 import Vue from "vue"
 
-let apiHost=process.env.VUE_APP_APIHOST;
+let apiHost = process.env.VUE_APP_APIHOST;
 
 axios.defaults.baseURL = apiHost;
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 
 axios.interceptors.request.use(function (config) {
-    document.querySelector("#loading").style.display="block";
-    config.headers.Authorization=window.sessionStorage.getItem("token");
-    config.headers.cityCode=window.sessionStorage.getItem("cityCode");
+    document.querySelector("#loading").style.display = "block";
+
+    if (config.url.indexOf('vendor.studioartiz.com')==-1){
+     config.headers.Authorization = window.sessionStorage.getItem("token");
+     config.headers.cityCode = window.sessionStorage.getItem("cityCode");
+    }
+    
     return config;
 }, function (error) {
     // 对请求错误做些什么
@@ -19,15 +23,15 @@ axios.interceptors.request.use(function (config) {
 
 // 添加响应拦截器
 axios.interceptors.response.use(function (response) {
-    document.querySelector("#loading").style.display="none";
+    document.querySelector("#loading").style.display = "none";
     return response.data;
 }, function (error) {
     // 对响应错误做点什么
-    document.querySelector("#loading").style.display="none";
+    document.querySelector("#loading").style.display = "none";
     return Promise.reject(error);
 });
 
 
-Vue.prototype.$axios=axios;
-Vue.prototype.$get=axios.get;
-Vue.prototype.$post=axios.post;
+Vue.prototype.$axios = axios;
+Vue.prototype.$get = axios.get;
+Vue.prototype.$post = axios.post;

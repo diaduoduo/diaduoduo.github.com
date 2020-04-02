@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>我们结婚啦</title>
+    <title>电子请帖</title>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
     <link rel="stylesheet" href="../assets/css/swiper.min.css">
     <link rel="stylesheet" href="../assets/css/animate.min.css">
     <script src="../assets/js/swiper.min.js"></script>
     <script src="../assets/js/swiper.animate.min.js"></script>
     <link href="../assets/css/common.css" rel="stylesheet" />
     <link href="./css/index.css" rel="stylesheet" />
-    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
     <script>
         setSize();
         function setSize() {
@@ -19,58 +20,37 @@
         window.onresize=setSize;
     </script>
 </head>
-<body>
+<body class="state">
+<div class="loading_box" style="display: none">
+    <div class="loader loader-13">
+      <div class="css-heart heart1"></div>
+      <div class="css-heart heart2"></div>
+      <div class="css-heart heart3"></div>
+      <div class="css-heart heart4"></div>
+    </div>
+</div>
 <img src="images/bgmBtn-fbd2dc.svg" class="icon-music rotate-music" id="icon_music" alt="">
-<audio src="../assets/music/SweetDream.mp3" autoplay preload="auto" loop id="audio"></audio>
+<audio class="music_src" src="" autoplay preload="auto" loop id="audio"></audio>
+<div class="top_box other_box">
+    <div class="back_btns"><i></i></div>
+</div>
 <div class="swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
             <div class="full">
-                <div class="pic_box">
-              <div class="icon_upload"></div>
-            </div>
-                <!-- <img src="images/16.png" alt="" class="s1-img1">
-                <div class="s1-img1-cover ani" swiper-animate-effect="fadeHalfInDown" swiper-animate-duration="0.4s" swiper-animate-delay="0.6s"></div>
-                <div class="hi ani"  swiper-animate-effect="bottomUp" swiper-animate-duration="1s" swiper-animate-delay="1s">Hi.嗨</div>
-                <img src="images/21.png" alt="" class="s1-img1 ani" swiper-animate-effect="s1-img2" swiper-animate-duration="3s" swiper-animate-delay="0s">
-                <div class="s1-img1-cover s1-cover2 ani" swiper-animate-effect="fullHeight" swiper-animate-duration="4s" swiper-animate-delay="0s"></div>
-                <div class="wrap-s1-tips1">
-                    <p class="s1-tips1 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.8s" swiper-animate-delay="3.8s">亲爱的</p>
-                    <p class="s1-tips1 s1-tips1-bottom ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.8s" swiper-animate-delay="3.8s">朋友们</p>
-                </div>
-                <img src="images/19.png" alt="" class="ani s1-img3" swiper-animate-effect="fadeIn" swiper-animate-duration="0.1s" swiper-animate-delay="4.8s">
-                <div class="s1-cover3 ani" swiper-animate-effect="fullWidth" swiper-animate-duration="5.8s" swiper-animate-delay="0s"></div> 
-                <div class="s1-tips2 ani"  swiper-animate-effect="fadeInUpBig" swiper-animate-duration="1s" swiper-animate-delay="5.1s">我要结婚了</div>
-                <img src="images/20.png" alt="" class="ani s1-img4" swiper-animate-effect="fadeIn" swiper-animate-duration="0.4s" swiper-animate-delay="6.4s">
-                <div class="s1-img1-cover s1-cover4 ani" swiper-animate-effect="full2" swiper-animate-duration="7.2s" swiper-animate-delay="0s"></div>
-                <div class="s1-tips3 ani"  swiper-animate-effect="bounceIn" swiper-animate-duration="0.8s" swiper-animate-delay="7s">和一个</div>
-                <img src="images/22.png" alt="" class="s1-img1 ani s1-img5" swiper-animate-effect="fadeIn" swiper-animate-duration="0.1s" swiper-animate-delay="8.2s">
-                <div class="top-half-circle ani" swiper-animate-effect="enlargeTop" swiper-animate-duration="9.2s" swiper-animate-delay="0s"></div>
-                <div class="bottom-half-circle ani"  swiper-animate-effect="enlargeBottom" swiper-animate-duration="9.2s" swiper-animate-delay="0s"></div>
-                <div class="s1-tips3 s1-tips4 ani" swiper-animate-effect="s1-tips4-ani" swiper-animate-duration="9.4s" swiper-animate-delay="0s">爱我</div>
-                <img src="images/15.png" alt="" class="ani s1-img3 s1-img6" swiper-animate-effect="fadeIn" swiper-animate-duration="0.6s" swiper-animate-delay="9.6s">
-                <div class="circle ani"  swiper-animate-effect="enlargeCircle" swiper-animate-duration="10.7s" swiper-animate-delay="0s"></div>
-                <div class="s1-tips3 s1-tips5 ani"  swiper-animate-effect="bounceIn" swiper-animate-duration="0.8s" swiper-animate-delay="10.3s">我也爱的人</div>
-                <img src="images/17.png" alt="" class="ani s1-img4 s1-img7" swiper-animate-effect="fadeIn" swiper-animate-duration="0.1s" swiper-animate-delay="11.2s">
-                <div class="rectangle ani"  swiper-animate-effect="rectangleLeft" swiper-animate-duration="12.4s" swiper-animate-delay="0s"></div>
-                <div class="rectangle ani" swiper-animate-effect="rectangleRight" swiper-animate-duration="12.4s" swiper-animate-delay="0s"></div>
-                <div class="s1-tips2 ani s1-tips6"  swiper-animate-effect="fadeInDownBig" swiper-animate-duration="1s" swiper-animate-delay="11.8s">诚挚邀请您</div>
-                <img src="images/18.png" alt="" class="s1-img4 ani s1-img8" swiper-animate-effect="fadeIn" swiper-animate-duration="0.4s" swiper-animate-delay="13s">
-                <div class="s1-img1-cover s1-cover4 ani s1-cover5" swiper-animate-effect="full3" swiper-animate-duration="14.2s" swiper-animate-delay="0s"></div>
-                <div class="s1-tips7 ani" swiper-animate-effect="fadeInUpBig" swiper-animate-duration="1s" swiper-animate-delay="13.8s">来参加</div>
-                <div class="s1-tips8 ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="1s" swiper-animate-delay="13.8s">我们的婚礼</div>-->
-                <img src="images/12.png" alt="" class="bg ani" style="z-index: 25" swiper-animate-effect="slideInUp" swiper-animate-duration="1s" swiper-animate-delay="15.3s">
-                <div class="wrap-s1-content ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="16.3s">
+                <div class="wrap-s1-content ani" swiper-animate-effect="slideInUp" swiper-animate-duration="1s" swiper-animate-delay="0">
                     <img src="images/79.png" alt="" class="s1-bg1">
                     <img src="images/80.png" alt="" class="s1-bg2">
                     <img src="images/26.png" alt="" class="s1-bg3">
                     <img src="images/24.png" alt="" class="s1-bg4">
                     <img src="images/25.png" alt="" class="s1-bg5">
                     <img src="images/46.png" alt="" class="s1-bg6">
-                    <div class="s1-name1 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.7s" swiper-animate-delay="16.8s">Mr.谢霆锋</div>
+                    <div class="s1-name1 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.7s" swiper-animate-delay="1s">Mr.<span class="men_name">谢霆锋</span></div>
                     <img src="images/47.png" alt="" class="s1-img7-1">
-                    <div class="s1-name2 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.7s" swiper-animate-delay="16.8s">Mrs.张柏芝</div>
-                    <div class="s1-time ani"  swiper-animate-effect="slideInUp" swiper-animate-duration="0.7s" swiper-animate-delay="16.8s">2019/10/3 格乐利雅徐汇店</div>
+                    <div class="s1-name2 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.7s" swiper-animate-delay="1s">Mrs.<span class="girl_name">张柏芝</span></div>
+
+                    <div class="s1-time ani"  swiper-animate-effect="slideInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1s"><span class="WeddingTime"></span></div>
+                    <div class="s1-address ani"  swiper-animate-effect="slideInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1s"><span class="WeddingAddress"></span></div>
                     <img src="images/42.png" alt="" class="s1-bg7">
                     <img src="images/66.png" alt="" class="s1-bg8">
                     <img src="images/73.png" alt="" class="s1-bg9">
@@ -80,6 +60,7 @@
                     <img src="images/72.png" alt="" class="s1-bg13">
                     <img src="images/59.png" alt="" class="s1-bg14 ani s1-bg14-ani">
                 </div>
+
             </div>
         </div>
         <div class="swiper-slide">
@@ -90,16 +71,16 @@
                     <img src="images/75.png" alt="" class="ani s2-img2">
                     <img src="images/59.png" alt="" class="ani s2-img3">
                     <img src="images/78.png" alt="" class="ani s2-img4">
-                    <div class="upload_pic">
-                        <div class="icon_upload"></div>
-                        <img src="images/45.png" alt="" class="top-img">
+                    <div class="upload_pic1">
+                    <div class="icon_upload photo_btn ani" swiper-animate-effect="btn_ani"></div>
+                        <img src="images/45.png" alt="" class="top-img" custom-type-img="1" ratio="1">
                     </div>
                 </div>
                 <div class="s2-img5 ani"  swiper-animate-effect="s3-img13-ani">
                     <img src="images/44.png" alt="" style="display: block;width: 100%;height: 100%">
                 </div>
-                <div class="s2-time ani"  swiper-animate-effect="fadeInUpBig" swiper-animate-duration="2s" swiper-animate-delay="0s">2020/11/05 九月十六 13:14 星期日</div>
-                <div class="s2-address ani"   swiper-animate-effect="fadeInUpBig" swiper-animate-duration="2s" swiper-animate-delay="0.3s">格乐丽雅徐汇店3号厅</div>
+                <div class="s2-time ani"  swiper-animate-effect="fadeInUpBig" swiper-animate-duration="2s" swiper-animate-delay="0s"><span class="WeddingTime"></span></div>
+                <div class="s2-address ani"   swiper-animate-effect="fadeInUpBig" swiper-animate-duration="2s" swiper-animate-delay="0.3s"><span class="WeddingAddress"></span></div>
                 <img src="images/42.png" alt="" class="ani s2-img6"  swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0s">
             </div>
         </div>
@@ -107,17 +88,27 @@
             <div class="full">
                 <img src="images/12.png" alt="" class="bg">
                 <img src="images/23.png" alt="" class="s3-img1 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0s">
-                <div class="wrap-s3-img2 ani"   swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.5s">
-                    <img src="images/11.png" alt="" class="s3-img2">
+                <div class="upload_pic2">
+                    <div class="icon_upload photo_btn ani" swiper-animate-effect="btn_ani"></div>
+                      <img src="images/img1.jpg" alt="" custom-type-img="2" class="wrap-s3-img2 s3-img2 ani"   swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.5s"  ratio="1">
                 </div>
                 <img src="images/8.png" alt="" class="s3-img3 ani" swiper-animate-effect="flip" swiper-animate-duration="2s" swiper-animate-delay="0s">
-                <div class="s3-tips ani"   swiper-animate-effect="zoomInUp" swiper-animate-duration="2s" swiper-animate-delay="0.6s">新娘：张柏芝</div>
+                <div class="s3-tips ani"   swiper-animate-effect="zoomInUp" swiper-animate-duration="2s" swiper-animate-delay="0.6s">新娘：<span class="girl_name">张柏芝</span></div>
                 <img src="images/9.png" alt="" class="s3-img4 ani " swiper-animate-effect="zoomIn" swiper-animate-duration="1.4s" swiper-animate-delay="0.5s">
+
+            <div class="edit_pos1 click_btn">
+              <div class="edit_btn editor_btn ani" swiper-animate-effect="btn_ani"></div>
+              <div class="html font-pose" custom-type-font="1">
                 <div class="s3-tips2 ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1.6s">
                     这一天我将穿上婚纱走向他
                     <br>
                     迎来我们人生的新起点
                 </div>
+              </div>
+            </div>
+
+
+
                 <img src="images/42.png" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.5s" class="ani s3-img5">
                 <img src="images/68.png" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.6s" class="ani s3-img6">
                 <img src="images/75.png" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.7s" class="ani s3-img7">
@@ -134,17 +125,26 @@
             <div class="full">
                 <img src="images/12.png" alt="" class="bg">
                 <img src="images/23.png" alt="" class="s3-img1 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0s">
-                <div class="wrap-s3-img2 ani"   swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.5s">
-                    <img src="images/10.png" alt="" class=" s4-img2">
+                <div class="upload_pic2">
+                    <div class="icon_upload photo_btn ani" swiper-animate-effect="btn_ani"></div>
+                    <img src="images/img2.jpg" alt="" custom-type-img="3" class="wrap-s3-img2 ani s4-img2"   swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.5s"  ratio="1">
                 </div>
                 <img src="images/8.png" alt="" class="s3-img3 ani" swiper-animate-effect="flip" swiper-animate-duration="2s" swiper-animate-delay="0s">
-                <div class="s3-tips ani"   swiper-animate-effect="zoomInUp" swiper-animate-duration="2s" swiper-animate-delay="0.6s">新郎：谢霆锋</div>
+                <div class="s3-tips ani"   swiper-animate-effect="zoomInUp" swiper-animate-duration="2s" swiper-animate-delay="0.6s">新郎：<span class="men_name">谢霆锋</span></div>
                 <img src="images/9.png" alt="" class="s3-img4 ani " swiper-animate-effect="zoomIn" swiper-animate-duration="1.4s" swiper-animate-delay="0.5s">
+
+            <div class="edit_pos1 click_btn">
+              <div class="edit_btn editor_btn ani" swiper-animate-effect="btn_ani"></div>
+              <div class="html font-pose" custom-type-font="2">
                 <div class="s3-tips2 ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1.6s">
                     我们还要牵手相伴走更多的路
                     <br>
                     未来的风景因你有了全新的意义
                 </div>
+              </div>
+            </div>
+
+
                 <img src="images/42.png" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.5s" class="ani s3-img5">
                 <img src="images/68.png" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.6s" class="ani s3-img6">
                 <img src="images/75.png" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.7s" class="ani s3-img7">
@@ -163,10 +163,27 @@
                 <img src="images/23.png" alt="" class="s3-img1 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0s">
                 <img src="images/54.png" alt="" class="ani s5-img6" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.6s" swiper-animate-delay="0.6s">
                 <img src="images/55.png" alt="" class="ani s5-img7" swiper-animate-effect="zoomIn" swiper-animate-duration="1.6s" swiper-animate-delay="0.6s">
-                <img src="images/30.png" alt="" class="ani s5-img8" swiper-animate-effect="zoomIn" swiper-animate-duration="1.6s" swiper-animate-delay="0.6s">
-                <img src="images/37.png" alt="" class="ani s5-img9" swiper-animate-effect="fadeInRightBig" swiper-animate-duration="3s" swiper-animate-delay="0s">
-                <img src="images/34.png" alt="" class="ani s5-img10" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="1s">
-                <img src="images/35.png" alt="" class="ani s5-img11" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="3s" swiper-animate-delay="0s">
+                <div class="upload_pic3">
+                    <div class="icon_upload photo_btn ani" swiper-animate-effect="btn_ani"></div>
+                    <img src="images/30.png" alt="" custom-type-img="4" ratio="1.43" class="ani s5-img8" swiper-animate-effect="zoomIn" swiper-animate-duration="1.6s" swiper-animate-delay="0.6s">
+                </div>
+                <div class="upload_pic4">
+                    <div class="icon_upload photo_btn ani" swiper-animate-effect="btn_ani"></div>
+                    <img src="images/37.png" alt="" custom-type-img="5" ratio="0.75" class="ani s5-img9" swiper-animate-effect="fadeInRightBig" swiper-animate-duration="3s" swiper-animate-delay="0s">
+                </div>
+
+                <div class="upload_pic5">
+                    <div class="icon_upload photo_btn ani" swiper-animate-effect="btn_ani"></div>
+                    <img src="images/34.png" alt="" custom-type-img="6" ratio="0.67" class="ani s5-img10" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="1s">
+                </div>
+                <div class="upload_pic6">
+                    <div class="icon_upload photo_btn ani" swiper-animate-effect="btn_ani"></div>
+                    <img src="images/35.png" alt="" custom-type-img="7" ratio="0.67" class="ani s5-img11" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="3s" swiper-animate-delay="0s">
+                </div>
+
+
+
+
                 <div class="s3-tips2 ani" style="top: 9.8rem"  swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="1.6s">
                     晓看天色暮看去，行也思君，坐也思君
                 </div>
@@ -191,15 +208,17 @@
             <div class="full">
                 <img src="images/12.png" alt="" class="bg">
                 <img src="images/23.png" alt="" class="s3-img1 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0s">
-                <div id="map" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.8s"></div>
+                <div class="upload_pic7">
+                    <div class="icon_upload photo_btn ani" swiper-animate-effect="btn_ani"></div>
+                    <img src="images/33.png" alt="" custom-type-img="8" ratio="0.89" class="s6-img1 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.8s">
+                </div>
+
                 <div class="s3-tips2 ani" style="top: 7.8rem"  swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="1.6s">
-                    2020/10/10（九月十六）星期二
+                    一起看世界
                 </div>
                 <div class="s3-tips2 ani" style="top: 8.3rem"  swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="1.6s">
-                    合肥市万达嘉华酒店6楼威尔斯顿大厅
+                    我的一生借你一程，这一程便是余生
                 </div>
-                <a href="tel:12345667" class="ani btn btn-left" swiper-animate-effect="fadeInRightBig" swiper-animate-duration="3s" swiper-animate-delay="0s">联系新娘</a>
-                <a href="tel:12345667" class="ani btn btn-right" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="3s" swiper-animate-delay="0s">联系新郎</a>
                 <img src="images/42.png" style="top: 10.8rem" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.5s" class="ani s3-img5">
                 <img src="images/68.png" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.6s" class="ani s3-img6">
                 <img src="images/75.png" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.7s" class="ani s3-img7">
@@ -215,6 +234,19 @@
                 <img src="images/59.png" class="s5-img3 ani" swiper-animate-effect="s5-img-ani">
                 <img src="images/70.png" class="s5-img4 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.67s">
                 <img src="images/70.png" class="s5-img5 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.9s">
+
+                <div class="link_box" style="display: none">
+                    <div class="ipt_box">
+                        <label class="">姓名</label>
+                        <input type="text" class="ipt_text" id="name" placeholder="请输入姓名" value=""/>
+                    </div>
+                    <div class="ipt_box">
+                        <label class="">联系方式</label>
+                        <input type="text" class="ipt_text" id="mobile" pattern="[0-9]*" placeholder="请输入联系方式" value=""/>
+                    </div>
+                    <div class="take_btns">我也要拍</div>
+                    </div>
+                    <div class="submit_succss" style="display: none">提交成功</div>
             </div>
         </div>
     </div>
@@ -229,58 +261,36 @@
         </div>
     </div>
 </section>
-<script>
-    var audio=document.querySelector("#audio");
-    var icon_music=document.querySelector("#icon_music");
-    audio.addEventListener("canplay",function () {
-        icon_music.className="icon-music rotate-music";
-        audio.play();
-    });
-    icon_music.addEventListener("click",function () {
-        console.log(audio.paused);
-        if(audio.paused){
-            audio.play();
-            icon_music.className="icon-music rotate-music";
-        }else{
-            audio.pause();
-            icon_music.className="icon-music";
-        }
-    });
-    var mySwiper = new Swiper('.swiper-container', {
-        direction: 'vertical',
-        // autoplay:5000,
-        mousewheelControl: true,
-        speed: 1200,
-        resistanceRatio:0,
-        onInit: function (swiper) {
-            swiperAnimateCache(swiper);
-            swiperAnimate(swiper);
-        },
-        onSlideChangeEnd: function (swiper) {
-            swiperAnimate(swiper);
-        },
-        onTransitionEnd: function (swiper) {
-            swiperAnimate(swiper);
-        },
-        onTouchStart: function (s) {
-
-        },
-        onProgress: function (swiper) {
-
-        },
-
-        onSetTransition: function (swiper, speed) {
-
-        },
-
-    });
-    var map = new BMap.Map("map");//在百度地图容器中创建一个地图
-    var point = new BMap.Point(121.452245,31.174757);//定义一个中心点坐标
-    map.centerAndZoom(point,16);//设定地图的中心点和坐标并将地图显示在地图容器中
-    window.map = map;//将map变量存储在全局
-    var marker = new BMap.Marker(point);  // 创建标注
-    map.addOverlay(marker);
-</script>
+<div class="start_btns">开始制作</div>
+<div class="form_box" style="display: none;">
+    <textarea
+    class="textarea_box"
+    autoHeight="true"
+    placeholder="请输入一段描述……"
+    name=""
+    id=""
+    ></textarea>
+    <buttom class="sure_btns">确定</buttom>
+</div>
+<div class="templatedetailsbtns">
+    <div class="set_icon">
+    <span></span>
+    <span>设置</span>
+    </div>
+    <div class="preview_icon">
+    <span></span>
+    <span>预览</span>
+    </div>
+    <div class="sending_btns">
+    发送
+    </div>
+</div>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/swiperpage.js"></script>
+    <script src="../assets/js/host.js"></script>
+    <script src="../assets/js/public.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
 

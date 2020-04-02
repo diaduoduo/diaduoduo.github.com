@@ -13,8 +13,36 @@
             $("#girlname").blur()
         })
         var addressId = helpClass.getQueryString("addressId");
+        var MusicLibraryID = helpClass.getQueryString("MusicLibraryID");
         console.log(addressId)
+        console.log(MusicLibraryID)
+
         if (addressId === null) {
+            
+            $("#Musicaddress").attr("musiclibraryid", MusicLibraryID)
+            hosts({
+                    url: "api/MusicLibrary/GetTemplateMusics",
+                },
+                function (res) {
+                    if (res.ReturnCode == "0") {
+                        for (var key in res.ReturnObject) {
+                            // console.log(key); //属性名（key）
+                             console.log("ID" + res.ReturnObject[key].Title); //属性值（value）
+                            if (res.ReturnObject[key].ID == MusicLibraryID) {
+                                console.log(res.ReturnObject[key].Title);
+
+                                $("#Musicaddress").html(res.ReturnObject[key].Title)
+                            }
+                        }
+                    }
+             else if (res.ReturnCode == "2") {
+                 alert("登录失效，请重新登录！")
+             }
+
+                    
+
+                }
+            )
             console.log("新建")
             $(".save_bts").click(function () {
                 if ($("#boyname").val() == "") {
@@ -46,6 +74,7 @@
                             "BridesName": $("#girlname").val(),
                             "WeddingTime": $("#date-group1-5").val(),
                             "WeddingAddress": $("#address").val(),
+                            "MusicLibraryID": $("#Musicaddress").attr("MusicLibraryID"),
                             UseTemplateUrl: "/h5/card5/index.html?userTemplateID={id}"
                         }
                     },
@@ -58,7 +87,84 @@
                     })
             })
         } else {
-             console.log("编辑")
+                console.log("编辑")
+        $("#Musicaddress").attr("musiclibraryid", MusicLibraryID)
+        // hosts({
+        //         url: "api/MusicLibrary/GetTemplateMusics",
+        //     },
+        //     function (res) {
+        //              alert(res.ReturnCode)
+        //         if (res.ReturnCode == "0") {
+        //             for (var key in res.ReturnObject) {
+        //                 // console.log(key); //属性名（key）
+        //                 console.log("ID" + res.ReturnObject[key].ID); //属性值（value）
+        //                 if (res.ReturnObject[key].ID == MusicLibraryID) {
+        //                     console.log(res.ReturnObject[key].Title)
+        //                     $("#Musicaddress").html(res.ReturnObject[key].Title)
+        //                 }
+        //             }
+        //         } 
+        //         else if(res.ReturnCode =="2"){
+        //             alert("登录失效，请重新登录！")
+        //         }
+
+
+
+        //     }
+        // )
+        hosts({
+                url: "api/MusicLibrary/GetTemplateMusics",
+            },
+            function (res) {
+                if (res.ReturnCode == "0") {
+                    //console.log(res)
+                    for (var i in res.ReturnObject){
+
+                        var html ="";
+                        if (res.ReturnObject[i].ID == $("#Musicaddress").attr("MusicLibraryID")) {
+                            console.log(res.ReturnObject[i].ID +"dddd")
+                        html += "<li class='cur' MusicLibraryID=" + res.ReturnObject[i].ID + ">" + res.ReturnObject[i].Title + "<span></span></li>";
+                            $("#Musicaddress").html(res.ReturnObject[i].Title)
+                        } else {
+                        html += "<li MusicLibraryID=" + res.ReturnObject[i].ID + ">" + res.ReturnObject[i].Title + "<span></span></li>";
+                        }
+
+                        $(".music_list").append(html)
+                    }
+                    $(".music_list li").click(function(){
+                         console.log($(this).attr("MusicLibraryID"))
+                        for (var key in res.ReturnObject) {
+                            // console.log(key); //属性名（key）
+                            //console.log("ID" + res.ReturnObject[key].ID); //属性值（value）
+                            if (res.ReturnObject[key].ID == $(this).attr("MusicLibraryID")) {
+                                console.log(res.ReturnObject[key].Title)
+                                console.log(res.ReturnObject[key].ID)
+                                $("#Musicaddress").attr("MusicLibraryID", res.ReturnObject[key].ID)
+                                $("#Musicaddress").html(res.ReturnObject[key].Title);
+                                $(".mask_box").hide()
+                            }
+                        }
+                        $(this).addClass("cur").siblings().removeClass("cur")
+
+                    });
+
+
+                }
+             else if (res.ReturnCode == "2") {
+                 alert("登录失效，请重新登录！")
+             }
+
+
+
+            }
+        )
+        $(".musicalist_pop").click(function(){
+            $(".mask_box").show()
+        })
+        $(".closed").click(function () {
+            $(".mask_box").hide()
+        })
+
         hosts({
                 url: "api/UseTemplateRecord/GetTemplateDetail",
                 data: {
@@ -105,12 +211,14 @@
                             "BridesName": $("#girlname").val(),
                             "WeddingTime": $("#date-group1-5").val(),
                             "WeddingAddress": $("#address").val(),
+                            "MusicLibraryID": $("#Musicaddress").attr("MusicLibraryID"),
                             UseTemplateUrl: "/h5/card5/index.html?userTemplateID={id}"
                         }
                     },
                     function (res) {
                         console.log(res);
                         if (res.ReturnCode == "0") {
+                            console.log(res)
                             console.log("保存成功");
                             window.location.href = "index.html?userTemplateID=" + res.ReturnObject;
                         }

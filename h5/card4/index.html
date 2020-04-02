@@ -5,18 +5,13 @@
     <title>电子请帖</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
     <link rel="stylesheet" href="../assets/css/swiper.min.css" />
     <link rel="stylesheet" href="../assets/css/animate.min.css" />
     <script src="../assets/js/swiper.min.js"></script>
     <script src="../assets/js/swiper.animate.min.js"></script>
     <link href="../assets/css/common.css" rel="stylesheet" />
     <link href="./css/index.css" rel="stylesheet" />
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/js/host.js"></script>
-    <script src="../assets/js/app.js"></script>
-    <script src="../assets/js/swiperpage.js"></script>
-    <script src="../assets/js/public.js"></script>
     <script>
       setSize();
       function setSize() {
@@ -26,7 +21,9 @@
       window.onresize = setSize;
     </script>
   </head>
-  <body class="preview">
+  <body  class="state">
+    <img src="images/muic.png" class="icon-music rotate-music" id="icon_music" alt="">
+    <audio class="music_src" src="http://qnm.hunliji.com/FuzaaiqOdRXrzwJXLDUCHZRY6g0T" preload="load" autoplay loop id="audio"></audio>
     <div class="top_box other_box">
       <div class="back_btns"><i></i></div>
     </div>
@@ -86,7 +83,7 @@
                 swiper-animate-duration="5.5s"
                 swiper-animate-delay="2.5s"
               >
-                <div class="gril_name">张多多</div>
+                <div class="girl_name">张多多</div>
               </div>
               <div
                 class="pos3 ani"
@@ -100,54 +97,28 @@
                 </div>
               </div>
               <div>
-                <img
-                  class="img_6 ani"
-                  swiper-animate-effect="zoomIn"
-                  swiper-animate-duration="1s"
-                  swiper-animate-delay="2s"
-                  src="images/6.png"
-                  alt=""
-                />
-                <img
-                  class="img_7 ani"
-                  swiper-animate-effect="zoomIn"
-                  swiper-animate-duration="1s"
-                  swiper-animate-delay="2s"
-                  src="images/7.png"
-                  alt=""
-                />
-                <img
-                  class="img_8 ani"
-                  swiper-animate-effect="zoomIn"
-                  swiper-animate-duration="1s"
-                  swiper-animate-delay="2s"
-                  src="images/8.png"
-                  alt=""
-                />
-                <img
-                  class="img_9 ani"
-                  swiper-animate-effect="zoomIn"
-                  swiper-animate-duration="1s"
-                  swiper-animate-delay="2s"
-                  src="images/9.png"
-                  alt=""
-                />
-                <img
-                  class="img_10 ani"
-                  swiper-animate-effect="zoomIn"
-                  swiper-animate-duration="1s"
-                  swiper-animate-delay="2s"
-                  src="images/10.png"
-                  alt=""
-                />
-                <img
-                  class="img_11 ani"
-                  swiper-animate-effect="zoomIn"
-                  swiper-animate-duration="1s"
-                  swiper-animate-delay="2s"
-                  src="images/11.png"
-                  alt=""
-                />
+                <img class="img_6 ani" swiper-animate-effect="rotateInDownRight "
+                  swiper-animate-duration="1s" swiper-animate-delay="3s" src="images/6.png" alt=""/>
+                <img class="img_7 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s"
+                  swiper-animate-delay="3s" src="images/7.png" alt="" />
+
+                <img class="img_8 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s"
+                  swiper-animate-delay="3s" src="images/8.png" alt="" />
+                  
+                <img class="img_9 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s"
+                  swiper-animate-delay="3s" src="images/11.png" alt="" />
+                <img class="img_10 ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s"
+                  swiper-animate-delay="3s" src="images/10.png" alt="" />
+                <img class="img_11 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s"
+                  swiper-animate-delay="3s" src="images/9.png" alt="" />
+                <img class="fl_img_12 ani" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="1s"
+                  swiper-animate-delay="3s" src="images/12.png" alt="" />
+                <img class="fl_img_13 ani" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="1s"
+                  swiper-animate-delay="3s" src="images/14.png" alt="" />
+                <img class="fl_img_14 ani" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="1s"
+                  swiper-animate-delay="3s" src="images/13.png" alt="" />
+                <!-- <img class="img_11" swiper-animate-effect="zoomIn" swiper-animate-duration="1s"
+                  swiper-animate-delay="2s" src="images/11.png" alt=""/> -->
                 <!-- <img class="img_12" src="images/12.png" alt="">
                   <img class="img_13" src="images/13.png" alt="">
                   <img class="img_14" src="images/14.png" alt=""> -->
@@ -167,36 +138,23 @@
         <div class="swiper-slide">
           <div class="full">
             <div class="pic_box">
-       <img class="img_12 ani" swiper-animate-effect="slideInDown" swiper-animate-duration="1s" custom-type-img="1"　 ratio="0.74" swiper-animate-delay="0" src="images/pic/6.jpg" alt=""/>
+              <div class="icon_upload photo_btn ani" swiper-animate-effect="btn_ani"></div>
+       <img class="img_12 ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" custom-type-img="1"　 ratio="0.74" swiper-animate-delay="0" src="images/pic/6.jpg" alt=""/>
             </div>
      
 
-            <img
-              class="img_13 ani"
+            <img class="img_13 ani"
               swiper-animate-effect="zoomIn"
               swiper-animate-duration="1s"
               swiper-animate-delay=".1s"
               src="images/15.png"
               alt=""
             />
-            <img
-              class="img_14 ani"
-              swiper-animate-effect="zoomIn"
-              swiper-animate-duration="1s"
-              swiper-animate-delay=".2s"
-              src="images/16.png"
-              alt=""
-            />
-            <img
-              class="img_15 ani"
-              swiper-animate-effect="zoomIn"
-              swiper-animate-duration="1s"
-              swiper-animate-delay=".3s"
-              src="images/17.png"
-              alt=""
-            />
+            <img class="img_14 ani" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="1s" swiper-animate-delay=".2s" src="images/16.png" alt="" />
+            <img class="img_15 ani" swiper-animate-effect="rotateInDownLeft"
+              swiper-animate-duration="1s" swiper-animate-delay=".3s" src="images/17.png" alt=""/>
             <div class="edit_pos1 click_btn">
-              <div class="edit_btn editor_btn"></div>
+              <div class="edit_btn editor_btn ani" swiper-animate-effect="btn_ani"></div>
               <div class="html" custom-type-font="1">
                 <p>幸福悄悄滋长</p>
                 <p>只想继续牵手微笑浪漫</p>
@@ -207,11 +165,13 @@
         <div class="swiper-slide">
           <div class="full">
             <div class="pic_box2">
+              <div class="icon_upload photo_btn ani" swiper-animate-effect="btn_ani"></div>
               <img class="img_16 ani" swiper-animate-effect="slideInRight" swiper-animate-duration=".5s"
               swiper-animate-delay="0" src="images/pic/1.jpg" alt="" custom-type-img="2" ratio="1.63"/>
 
             </div>
             <div class="pic_box3">
+              <div class="icon_upload photo_btn ani" swiper-animate-effect="btn_ani"></div>
               <img class="img_17 ani" swiper-animate-effect="slideInLeft" swiper-animate-duration=".5s"
               swiper-animate-delay="0" src="images/pic/2.jpg" alt="" custom-type-img="3" ratio="0.61"/>
             </div>           
@@ -240,16 +200,17 @@
         <div class="swiper-slide">
           <div class="full">
             <div class="pic_box5">
+              <div class="icon_upload photo_btn ani" swiper-animate-effect="btn_ani"></div>
               <img class="img22 ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="1s"
               swiper-animate-delay="0s" src="images/pic/7.jpg" alt="" custom-type-img="4" ratio="0.68"/>
             </div>
             <div class="pic_box6">
-
+<div class="icon_upload photo_btn ani" swiper-animate-effect="btn_ani"></div>
 <img class="img23 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0s"
               src="images/pic/8.jpg" alt="" custom-type-img="5" ratio="0.77"/>
             </div>
             <div class="pic_box7">
-              <div class="icon_upload photo_btn"></div>
+              <div class="icon_upload photo_btn ani" swiper-animate-effect="btn_ani"></div>
               <img class="img24 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s"
               swiper-animate-delay="0s" src="images/pic/9.jpg" alt="" custom-type-img="6" ratio="1.62"/>
             </div>
@@ -290,7 +251,7 @@
         <div class="swiper-slide">
           <div class="full">
             <div class="edit_posf5 click_btn">
-              <div class="edit_btn editor_btn"></div>
+              <div class="edit_btn editor_btn ani" swiper-animate-effect="btn_ani"></div>
               <div class="html" custom-type-font="2">
                 <p>幸福悄悄滋长!!!</p>
                 <p>只想继续牵手微笑浪漫</p>
@@ -305,7 +266,7 @@
             <img class="f5_img5 ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0.8s" src="images/31.png" alt="">
 
             <div class="f5_image">
-              <div class="icon_upload photo_btn"></div>
+              <div class="icon_upload photo_btn ani" swiper-animate-effect="btn_ani"></div>
               <img class="img_12 img_12_2 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="2s" swiper-animate-delay="0.5s" src="images/pic/6.jpg" custom-type-img="7" ratio="1.24" alt=""/>
             </div>
             
@@ -323,12 +284,12 @@
             <img class="f6_img3 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.8s" swiper-animate-delay="0" src="images/34.png" alt="">
             <img class="f6_img4 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.8s" swiper-animate-delay="0" src="images/35.png" alt="">
             <div class="f6_image2">
-              <div class="icon_upload photo_btn"></div>
+              <div class="icon_upload photo_btn ani" swiper-animate-effect="btn_ani"></div>
               <img class="img_12 img_12_2 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="2s"
               swiper-animate-delay="0" src="images/pic/10.jpg" custom-type-img="8" ratio="1.61" alt=""/>
             </div>
             <div class="f6_image1">
-              <div class="icon_upload photo_btn"></div>
+              <div class="icon_upload photo_btn ani" swiper-animate-effect="btn_ani"></div>
               <img class="img_12 img_12_2 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="2s"
               swiper-animate-delay="0" src="images/pic/11.jpg" custom-type-img="9" ratio="1.61" alt=""/>
             </div>
@@ -338,73 +299,58 @@
         <div class="swiper-slide">
           <div class="full">
             <div class="f7_image">
-              <div class="icon_upload photo_btn"></div>
+              <div class="icon_upload photo_btn ani" swiper-animate-effect="btn_ani"></div>
               <img class="img_12 img_12_2 ani" swiper-animate-effect="slideInDown" swiper-animate-duration="1s"
               swiper-animate-delay="0" src="images/pic/12.jpg" custom-type-img="10" ratio="0.59" alt=""/>
             </div>
+           <div class="link_box" style="display: none">
+              <div class="ipt_box">
+                <label class="">姓名</label>
+                <input type="text" class="ipt_text" id="name" placeholder="请输入姓名" value=""/>
+              </div>
+              <div class="ipt_box">
+                <label class="">联系方式</label>
+                <input type="text" class="ipt_text" id="mobile" pattern="[0-9]*" placeholder="请输入联系方式" value=""/>
+              </div>
+              <div class="take_btns">我也要拍</div>
+            </div>
+            <div class="submit_succss" style="display: none">提交成功</div>
             
           </div>
         </div>
       </div>
     </div>
     <div class="start_btns">开始制作</div>
-    <!-- <div class="show">点击预览</div> -->
-    <script>
-     
+    <div class="form_box" style="display: none;">
+      <textarea
+        class="textarea_box"
+        autoHeight="true"
+        placeholder="请输入一段描述……"
+        name=""
+        id=""
+      ></textarea>
+      <buttom class="sure_btns">确定</buttom>
+    </div>
+    <div class="templatedetailsbtns">
+      <div class="set_icon">
+        <span></span>
+        <span>设置</span>
+      </div>
+      <div class="preview_icon">
+        <span></span>
+        <span>预览</span>
+      </div>
+      <div class="sending_btns">
+        发送
+      </div>
+    </div>
+  </body>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/swiperpage.js"></script>
+    <script src="../assets/js/host.js"></script>
+    <script src="../assets/js/public.js"></script>
+    <script src="./js/index.js"></script>
 
-      // var str = location.href; //取得整个地址
-      // var num = str.split("?")[1].split("=")[1].split("&")[0];
-      // var token = str.split("token=").pop();
-
-     var num = helpClass.getQueryString("id");  
-     var token= helpClass.getQueryString("token");
-          localStorage.setItem("token",token);
-          console.log(num);console.log(token);
-      $(document).on("touchstart",".back_btns",function(){
-           obj.finish()
-      });
-      hosts(
-        {
-          url: "api/HappinessTemplate/GetTemplateDetail",
-          data: {
-            ID: num
-          }
-        },
-        function(res) {
-          console.log(res);
-          document.title=res.ReturnObject.Title;
-          $(".men_name").html(res.ReturnObject.GroomName);
-          $(".girl_name").html(res.ReturnObject.BridesName);
-          $(".WeddingTime").html(res.ReturnObject.WeddingTime);
-          $(".WeddingAddress").html(res.ReturnObject.WeddingAddress);
-          
-
-          $("[custom-type-img]").each(function () {
-            var imgnum = $(this).attr("custom-type-img"); 
-            var attach = res.ReturnObject.SYSAttachs.find(function (item) {
-              return item.CustomType == imgnum;
-            });
-            if (attach) $(this).attr("src", attach.FilePath);
-          });
-
-        $("[custom-type-font]").each(function () {
-          console.log(this);
-          var fontnum = $(this).attr("custom-type-font");
-          var contents = res.ReturnObject.TemplateContents.find(function (item) {
-            return item.CustomType == fontnum;
-          });
-          console.log(contents);
-
-          if (contents) {
-            $(this).html(contents.Content);
-          }
-        });
-          $(".start_btns").click(function() {
-            window.location.href = "address.html?id=" + res.ReturnObject.ID;
-          });
-        }
-      );
-
-    </script>
   </body>
 </html>

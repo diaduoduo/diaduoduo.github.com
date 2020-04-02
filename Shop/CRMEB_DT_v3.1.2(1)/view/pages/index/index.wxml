@@ -1,0 +1,80 @@
+<navbar parameter='{{parameter}}' logoUrl="{{logoUrl}}"></navbar>
+<view class='index'>
+    <view class="indexTip" style="top:{{navH+13}}rpx" hidden="{{iShidden}}">
+       <view class="tip acea-row row-between-wrapper">
+          <view class="text">点击“<image src="/images/spot.png"></image>”添加到我的小程序， 微信首页下拉即可访问商城。</view>
+       <view class="iconfont icon-guanbi1" bindtap="closeTip"></view>
+       </view> 
+    </view>
+    <view class='index-bg' wx:if="{{imgUrls.length}}">
+        <swiper indicator-dots="true"
+            autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(255,255,255,0.6)" indicator-active-color="#fff">
+            <block wx:for="{{imgUrls}}" wx:key>
+              <swiper-item>
+                <view class='slide-navigator acea-row row-between-wrapper'>
+                  <image src="{{item.pic}}" bindtap="go" data-item ="{{item}}" class="slide-image"/>
+                </view>                
+              </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!-- 上新　优惠券　价目表　Ｓ -->
+    <view class="acea-row menus_ul">
+      <view class="menus_li">
+        <image class="menus_image" src="/images/shop/icon_new@2x.png"></image>
+        <view>上新</view>
+      </view>
+      <view class="menus_li">
+        <image class="menus_image" src="/images/shop/icon_coupom@2x.png"></image>
+        <view>优惠券</view>
+      </view>
+      <view class="menus_li">
+        <image  class="menus_image" src="/images/shop/icon_list@2x.png"></image>
+        <view>价目表</view>
+      </view>
+    </view>
+    <!-- 上新　优惠券　价目表　E -->
+    <view class='wrapper' wx:if="{{fastList.length}}">
+       <view class='title row-between-wrapper'>
+       <view class='name'>NEW COLLECTION</view>
+          <!-- <navigator class='more' url='/pages/goods_cate/goods_cate' open-type='switchTab'>更多<text class='iconfont icon-jiantou'></text></navigator> -->
+       </view>
+       <view class='scroll-product'>
+          <scroll-view class="scroll-view_x" scroll-x style="width:auto;overflow:hidden;">
+              <block wx:for="{{fastList}}" wx:key>
+                 <navigator hover-class="none" class='item' url='/pages/goods_list/goods_list?sid={{item.id}}&title={{item.cate_name}}'>
+                    <view class='img-box'>
+                      <image src='{{item.pic}}'></image>
+                    </view>
+                    <view class='pro-info line1'>{{item.cate_name}}精品推荐精品推荐精品推荐</view>
+                  </navigator>
+              </block>  
+           </scroll-view>
+        </view>
+    </view>
+  <view class="prod_box">
+    <!-- 产品　Ｓ -->
+    <view class="prod_ul">
+      <view class="prod_li">
+        <view class="prod_bg"></view>
+        <view class="prod_title">韩国TOP ZIO西服定制已成为</view>
+        <view class="prod_title">韩国男装个性的“明星”品牌</view>
+        <image class="prod_img" src="http://datong.crmeb.net/public/uploads/attach/2019/03/29/5c9de8b7c5cc5.png"></image>
+      </view>
+      <view class="prod_li">
+        <view class="prod_bg"></view>
+        <view class="prod_title">Grace Kelly的设计风格复古奢华</view>
+        <view class="prod_title">穿着上Grace Kelly婚纱无一不让人</view>
+        <view class="prod_title">屏息凝神，驻足观望</view>
+        <image class="prod_img" src="http://datong.crmeb.net/public/uploads/attach/2019/03/29/5c9de8b7c5cc5.png"></image>
+      </view>
+    </view>
+      <!-- 产品　Ｅ -->
+    <view class="brandlogo_ul">
+      <view class="brandlogo_li"></view>
+    </view>
+    <view class="prod_img2"></view>
+  </view>
+</view>
+<coupon-window window='{{window}}' couponList="{{couponList}}" bind:onColse="onColse"></coupon-window>
+<home></home>
