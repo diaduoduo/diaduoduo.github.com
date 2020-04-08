@@ -1,6 +1,6 @@
 <template>
   <div class="my-order" ref="container">
-    <div class="header bg-color-red">
+    <div class="header">
       <div class="picTxt acea-row row-between-wrapper">
         <div class="text">
           <div class="name">订单信息</div>

@@ -121,6 +121,14 @@ input{line-height: normal; box-sizing:border-box;}
 .line2{word-break:break-all;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
 .mask{position:fixed;top:0;left:0;right:0;bottom:0;z-index:555;background-color:rgba(0,0,0,0.5);}
 
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+font-size: .3rem;
+font-family:PingFang SC;
+font-weight:500;
+color:rgba(254,254,254,0.87);
+opacity:0.8;
+}
+
 
 
 

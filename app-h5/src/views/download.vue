@@ -5,7 +5,7 @@
             <a href="javascript:void(0)" @click="showModal=!showModal" v-if="platform==='weChat'">
                 <img src="../assets/images/android@2x.png" alt="" class="download-btn">
             </a>
-            <a v-else download="韩国艺匠婚尚" href="https://apptopgalleria2.oss-cn-shanghai.aliyuncs.com/APK/app-release_137_jiagu_sign.apk">
+            <a v-else download="韩国艺匠婚尚" href="https://apptopgalleria2.oss-cn-shanghai.aliyuncs.com/APK/app-release_151_jiagu_sign.apk">
                 <img src="../assets/images/android@2x.png" alt="" class="download-btn">
             </a>
             <a href="itms-apps://itunes.apple.com/cn/app/id1470347984?mt=8">

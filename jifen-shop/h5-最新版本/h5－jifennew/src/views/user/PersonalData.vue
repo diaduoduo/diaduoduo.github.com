@@ -158,16 +158,21 @@ export default {
     this.avatar = this.userInfo.avatar;
     this.isWeixin = isWeixin();
     this.getUserInfo();
+    console.log("ef");
   },
   methods: {
     switchAccounts: function(index) {
+      console.log(index);
       let that = this;
       this.userIndex = index;
+      console.log(this.userIndex);
       let userInfo = this.switchUserInfo[this.userIndex];
+      console.log(userInfo);
       if (this.switchUserInfo.length <= 1) return true;
       if (userInfo === undefined)
         return this.$dialog.toast({ mes: "切换的账号不存在" });
       if (userInfo.user_type === "h5") {
+        console.log(userInfo.user_type);
         switchH5Login()
           .then(({ data }) => {
             that.$dialog.loading.close();
@@ -181,6 +186,7 @@ export default {
             return that.$dialog.toast({ mes: err });
           });
       } else {
+        console.log(userInfo.user_type);
         cookie.set("loginType", "wechat", 60);
         this.$dialog.loading.close();
         this.$store.commit("LOGOUT");

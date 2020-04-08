@@ -1,13 +1,7 @@
 <template>
   <div class="register absolute">
-    <div class="shading">
-      <div class="pictrue acea-row row-center-wrapper">
-        <img :src="logoUrl" v-if="logoUrl" />
-        <img src="@assets/images/logo2.png" v-else />
-      </div>
-    </div>
     <div class="whiteBg" v-if="formItem === 1">
-      <div class="title acea-row row-center-wrapper">
+      <div class="title acea-row">
         <div
           class="item"
           :class="current === index ? 'on' : ''"
@@ -57,17 +51,12 @@
       <div class="list" :hidden="current !== 1">
         <div class="item">
           <div class="acea-row row-between-wrapper">
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-phone_"></use>
-            </svg>
             <input type="text" placeholder="输入手机号码" v-model="account" />
           </div>
         </div>
         <div class="item">
           <div class="align-left">
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-code_1"></use>
-            </svg>
+
             <input
               type="text"
               placeholder="填写验证码"
@@ -171,7 +160,11 @@
         <span @click="formItem = 1" class="font-color-red">立即登录</span>
       </div>
     </div>
-    <div class="bottom"></div>
+
+    <div class="copyright">
+      <a class="copyright_info">未注册的手机验证成功后将自动注册，注册视为同意<strong>《服务条款》</strong>
+      </a>
+    </div>
   </div>
 </template>
 <script>
@@ -197,7 +190,7 @@ export default {
   mixins: [sendVerifyCode],
   data: function() {
     return {
-      navList: ["账号登录", "快速登录"],
+      navList: ["", "快捷登录注册"],
       current: 1,
       account: "",
       password: "",
@@ -398,5 +391,25 @@ export default {
 .code img {
   width: 100%;
   height: 100%;
+}
+.copyright{
+  position: absolute;
+  width: 7.5rem;
+  height: .68rem;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color:rgba(238,238,238,0.5);
+
+}
+.copyright .copyright_info{
+  display: block;
+  font-size: .24rem;
+  font-family:PingFang SC;
+  font-weight:500;
+  color:rgba(60,45,68,1);
+  height: .68rem;
+  line-height: .68rem;
+  text-align: center;
 }
 </style>

@@ -20,6 +20,8 @@ export default function wechat() {
     if (instance) return resolve(instance);
     getWechatConfig()
       .then(res => {
+        console.log(1213123);
+        console.log(res.data);
         res.data.customUrl = WECHAT_SCRIPT_URL;
         const _wx = WechatJSSDK(res.data);
         wechatObj = _wx;

@@ -1,11 +1,7 @@
 <template>
   <div class="lottie-bg">
     <div id="lottie">
-      <img
-        src="@assets/images/live-logo.gif"
-        rel="preload"
-        style="width: 100%;"
-      />
+      <img src="@assets/images/live-logo.gif" rel="preload" style="width: 100%;" />
     </div>
   </div>
 </template>

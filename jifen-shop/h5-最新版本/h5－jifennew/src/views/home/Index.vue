@@ -39,7 +39,7 @@
         <div>{{ item.name }}</div>
       </router-link>
     </div>
-    <div class="news acea-row row-between-wrapper">
+    <!-- <div class="news acea-row row-between-wrapper">
       <div class="pictrue"><img src="@assets/images/news.png" /></div>
       <div class="swiper-no-swiping new-banner">
         <swiper
@@ -65,7 +65,7 @@
           </swiper-slide>
         </swiper>
       </div>
-    </div>
+    </div> -->
     <div
       class="specialArea acea-row row-between-wrapper"
       v-if="activityOne.wap_link !== undefined || activity.length"
@@ -456,8 +456,10 @@ export default {
   methods: {
     // 轮播图跳转
     goUrl(index) {
-      let url = this.banner[index].wap_url;
+      let url = this.banner[index].url;
+      console.log(url);
       let newStr = url.indexOf("http") === 0;
+      console.log(newStr);
       if (newStr) {
         window.location.href = url;
       } else {

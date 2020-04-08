@@ -1,6 +1,6 @@
 <template>
   <div class="user">
-    <div class="header bg-color-red acea-row row-between-wrapper">
+    <div class="header acea-row row-between-wrapper">
       <div class="picTxt acea-row row-between-wrapper">
         <div class="pictrue"><img :src="userInfo.avatar" /></div>
         <div class="text">
@@ -10,11 +10,7 @@
               <img :src="userInfo.vip_icon" />{{ userInfo.vip_name }}
             </div>
           </div>
-          <router-link :to="'/user/data'" class="id" v-if="userInfo.phone">
-            ID：{{ userInfo.uid || 0
-            }}<span class="iconfont icon-bianji1"></span>
-          </router-link>
-          <router-link :to="'/user/binding'" class="binding" v-else>
+          <router-link :to="'/user/binding'" class="binding" v-if="userInfo.phone==''">
             <span>绑定手机号</span>
           </router-link>
         </div>
@@ -45,7 +41,7 @@
         </div>
 
         <!--</router-link>-->
-        <router-link :to="'/user/integral'" class="item" v-else>
+        <router-link :to="'/user/integral'" class="item">
           <div>当前积分</div>
           <div class="num">{{ userInfo.integral || 0 }}</div>
         </router-link>
@@ -146,7 +142,7 @@
         </div>
       </div>
     </div>
-    <img src="@assets/images/support.png" class="support" />
+    <!-- <img src="@assets/images/support.png" class="support" /> -->
     <div class="footer-line-height"></div>
     <SwitchWindow
       v-on:changeswitch="changeswitch"
@@ -251,6 +247,9 @@ export default {
 </script>
 
 <style scoped>
+.user .wrapper .myService{
+  display: none;
+}
 .footer-line-height {
   height: 1rem;
 }
@@ -275,10 +274,10 @@ export default {
 }
 .binding {
   padding: 0.05rem 0.2rem;
-  background-color: #ca1f10;
+  background-color: #3b2c43;
   border-radius: 50px;
   font-size: 0.14rem;
-  border: 1px solid #e8695e;
+  border: 1px solid #3b2c43;
   color: #ffffff;
 }
 </style>
