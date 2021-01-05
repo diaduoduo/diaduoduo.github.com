@@ -9,7 +9,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "axios": "0.18.0",
+    "axios": "0.21.1",
     "mint-ui": "^2.2.13",
     "vue": "^2.6.6",
     "vue-awesome-picker": "^1.1.0",
